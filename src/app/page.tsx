@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import ChartPage from "@/poges/chartPages";
+import data from '../mocks/fakeData.json';
 
 
 export default function Home() {
@@ -7,7 +8,7 @@ export default function Home() {
     <>
       <main className="flex min-h-screen flex-col items-center justify-between p-2">
       <Header />
-      <ChartPage />
+      <ChartPage {...data.company}/>
       </main>
     </>
   )

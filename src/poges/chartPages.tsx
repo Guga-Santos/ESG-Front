@@ -1,68 +1,69 @@
 import { LinesChart } from "@/components/LinesCharts";
 import { MixedChart } from "@/components/MixedChart";
+import { ILineChartProps } from "@/interfaces/chartProps";
 
-export default function ChartPage(props: {}){
+export default function ChartPage(props: Partial<ILineChartProps>){
   return(
     <div className="flex min-h-screen flex-wrap items-center justify-evenly p-12">
         <LinesChart 
-        id={"apexchart-example"} 
-        categories={[1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]} 
-        name={"series-1"} 
-        data={[30, 40, 35, 50, 49, 60, 70, 91, 125]} 
+        id={props.id || ""} 
+        categories={props.categories || []} 
+        name={props.name || ""} 
+        data={props.data || []} 
         type={"area"} 
         height={200} 
         width={400} />
         <LinesChart 
-        id={"EEG"} 
-        categories={[1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]} 
-        name={"series-1"} 
-        data={[30, 40, 35, 50, 49, 60, 70, 91, 125]} 
+        id={props.id || ""} 
+        categories={props.categories || []} 
+        name={props.name || ""} 
+        data={props.data || []} 
         type={"line"} 
         height={200} 
         width={400} />
         <LinesChart 
-        id={"EEG"} 
-        categories={[1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]} 
-        name={"series-1"} 
-        data={[30, 40, 35, 50, 49, 60, 70, 91, 125]} 
+         id={props.id || ""} 
+         categories={props.categories || []} 
+         name={props.name || ""} 
+         data={props.data || []} 
         type={"bar"} 
         height={200} 
         width={400} />
         <LinesChart 
-        id={"EEG"} 
-        categories={[1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]} 
-        name={"ESG"} 
-        data={[30, 40, 35, 50, 49, 60, 70, 91, 125]} 
+        id={props.id || ""} 
+        categories={props.categories || []} 
+        name={props.name || ""} 
+        data={props.data || []} 
         type={"heatmap"} 
         height={200} 
         width={400} />
         <LinesChart 
-        id={"EEG"} 
-        categories={[1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]} 
-        name={"series-1"} 
-        data={[30, 40, 35, 50, 49, 60, 70, 91, 125]} 
+        id={props.id || ""} 
+        categories={props.categories || []} 
+        name={props.name || ""} 
+        data={props.data || []} 
         type={"radar"} 
         height={400} 
         width={400} />  
         <MixedChart  
-        id={"EEG"} 
-        categories={[1991, 1992, 1993, 1994, 1995, 1996, 1997]} 
-        name={"Natura-ESG"} 
+         id={props.id || ""} 
+         categories={props.categories || []} 
+         name={props.name || ""} 
         series={[{
           name: 'Carbono Neutro',
-          data: [44, 55, 41, 37, 22, 43, 21]
+          data: [44, 55, 41, 37, 22, 43, 21, 24, 35]
         }, {
           name: 'Descarte de resíduos',
-          data: [53, 32, 33, 52, 13, 43, 32]
+          data: [53, 32, 33, 52, 13, 43, 32, 33, 36]
         }, {
           name: 'Energia Limpa',
-          data: [12, 17, 11, 9, 15, 11, 20]
+          data: [12, 17, 11, 9, 15, 11, 20, 23, 26]
         }, {
           name: 'Produção sustentável',
-          data: [9, 7, 5, 8, 6, 9, 4]
+          data: [9, 7, 5, 8, 6, 9, 4, 5, 10]
         }, {
           name: 'Reciclagem',
-          data: [25, 12, 19, 32, 25, 24, 10]
+          data: [13, 10, 11, 14, 16, 11, 19, 16, 21]
         }]}
         type={"bar"} 
         height={400} 
