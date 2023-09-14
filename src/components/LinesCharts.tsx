@@ -14,6 +14,19 @@ export function LinesChart(props: ILineChartProps){
         xaxis: {
           categories: props.categories,
         },
+        title: {
+          text: props.name,
+          margin: 10,
+          offsetX: 0,
+          offsetY: 0,
+          floating: false,
+          style: {
+            fontSize:  '14px',
+            fontWeight:  'bold',
+            fontFamily:  undefined,
+            color:  '#FFF'
+          },
+        },
         fill: {
           type: 'gradient',
           gradient: {
@@ -37,7 +50,7 @@ export function LinesChart(props: ILineChartProps){
       }]
 
     return(
-        <>
+        <div className="mb-6">
              <ApexChart 
             type={props.type} 
             options={option} 
@@ -45,7 +58,7 @@ export function LinesChart(props: ILineChartProps){
             height={props.height} 
             width={props.width}
             animate />
-        </>
+        </div>
     )
     
 }

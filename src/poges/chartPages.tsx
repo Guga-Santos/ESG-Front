@@ -5,6 +5,8 @@ import { ILineChartProps } from "@/interfaces/chartProps";
 export default function ChartPage(props: Partial<ILineChartProps>){
   return(
     <div className="flex min-h-screen flex-wrap items-center justify-evenly p-12">
+      
+
         <LinesChart 
         id={props.id || ""} 
         categories={props.categories || []} 
@@ -13,6 +15,7 @@ export default function ChartPage(props: Partial<ILineChartProps>){
         type={"area"} 
         height={200} 
         width={400} />
+
         <LinesChart 
         id={props.id || ""} 
         categories={props.categories || []} 
@@ -21,6 +24,7 @@ export default function ChartPage(props: Partial<ILineChartProps>){
         type={"line"} 
         height={200} 
         width={400} />
+
         <LinesChart 
          id={props.id || ""} 
          categories={props.categories || []} 
@@ -29,6 +33,7 @@ export default function ChartPage(props: Partial<ILineChartProps>){
         type={"bar"} 
         height={200} 
         width={400} />
+
         <LinesChart 
         id={props.id || ""} 
         categories={props.categories || []} 
@@ -37,6 +42,7 @@ export default function ChartPage(props: Partial<ILineChartProps>){
         type={"heatmap"} 
         height={200} 
         width={400} />
+
         <LinesChart 
         id={props.id || ""} 
         categories={props.categories || []} 
@@ -45,6 +51,7 @@ export default function ChartPage(props: Partial<ILineChartProps>){
         type={"radar"} 
         height={400} 
         width={400} />  
+        
         <MixedChart  
          id={props.id || ""} 
          categories={props.categories || []} 
