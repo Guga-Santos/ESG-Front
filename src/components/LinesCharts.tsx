@@ -28,6 +28,7 @@ export function LinesChart(props: ILineChartProps){
             colorStops: []
           }
         },
+
       }
 
     const series = [{
@@ -37,17 +38,13 @@ export function LinesChart(props: ILineChartProps){
 
     return(
         <>
-        <div
-        className="border-2 rounded-lg p-4 m-6">
-
-            <ApexChart 
+             <ApexChart 
             type={props.type} 
             options={option} 
             series={series} 
             height={props.height} 
             width={props.width}
             animate />
-        </div>
         </>
     )
     
