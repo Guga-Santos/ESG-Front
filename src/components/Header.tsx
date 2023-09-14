@@ -1,13 +1,19 @@
 /* eslint-disable jsx-a11y/alt-text */
 'use client'
-import { useState } from "react";
-
+import isMobile from 'is-mobile';
+import { useEffect, useState } from "react";
 /* eslint-disable @next/next/no-img-element */
 export default function Header() {
   const [hidded, setHidded] = useState<boolean>(false);
+  const [isMobileDevice, setIsMobileDevice] = useState(true);
+
+  useEffect(() => {
+    setIsMobileDevice(isMobile())
+  }, [])
 
   function handleDrop() {
     setHidded(!hidded);
+    setIsMobileDevice(!isMobileDevice);
   }
 
   return (
@@ -33,7 +39,7 @@ export default function Header() {
               </svg>
             </button>
           </div>
-          <div className={hidded ? "hidden" : "justify-between items-center w-full lg:flex lg:w-auto lg:order-1"} id="mobile-menu-2">
+          <div className={isMobileDevice ? "hidden" : "justify-between items-center w-full lg:flex lg:w-auto lg:order-1"} id="mobile-menu-2">
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 lg:mr-4">
               <li>
                 <a href="#" className="block py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white" aria-current="page">Home</a>
