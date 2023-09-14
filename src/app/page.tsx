@@ -1,9 +1,12 @@
+import Header from "@/components/Header";
 import { LinesChart } from "@/components/LinesCharts";
 import { MixedChart } from "@/components/MixedChart";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-12">
+      <Header />
+      <div>
       <LinesChart 
       id={"apexchart-example"} 
       categories={[1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]} 
@@ -67,6 +70,7 @@ export default function Home() {
       type={"bar"} 
       height={500} 
       width={800} />  
+      </div>
     </main>
   )
 }
