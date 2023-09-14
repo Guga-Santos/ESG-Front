@@ -1,28 +1,34 @@
 'use client' // if you use app dir, don't forget this line
 
+import { IChartProps } from "@/interfaces/chartProps";
 import dynamic from "next/dynamic";
 const ApexChart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 
-export function ExampleChart(){
+export function GenericChart(props: IChartProps){
 
     const option = {
         chart: {
-          id: 'apexchart-example'
+          id: props.id
         },
         xaxis: {
-          categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
+          categories: props.categories
         }
       }
 
     const series = [{
-        name: 'series-1',
-        data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
+        name: props.name,
+        data: props.data
       }]
 
     return(
         <>
-            <ApexChart type="line" options={option} series={series} height={200} width={500} />
+            <ApexChart 
+            type="area" 
+            options={option} 
+            series={series} 
+            height={props.height} 
+            width={props.width} />
         </>
     )
     
