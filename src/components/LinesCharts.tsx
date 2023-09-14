@@ -12,8 +12,22 @@ export function LinesChart(props: ILineChartProps){
           id: props.id
         },
         xaxis: {
-          categories: props.categories
-        }
+          categories: props.categories,
+        },
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shade: 'dark',
+            type: "vertical",
+            shadeIntensity: 0.1,
+            gradientToColors: undefined, // optional, if not defined - uses the shades of same color in series
+            inverseColors: false,
+            opacityFrom: 1,
+            opacityTo: 0.5,
+            stops: [0, 95, 100],
+            colorStops: []
+          }
+        },
       }
 
     const series = [{
@@ -23,12 +37,17 @@ export function LinesChart(props: ILineChartProps){
 
     return(
         <>
+        <div
+        className="border-2 rounded-lg p-4 m-6">
+
             <ApexChart 
             type={props.type} 
             options={option} 
             series={series} 
             height={props.height} 
-            width={props.width} />
+            width={props.width}
+            animate />
+        </div>
         </>
     )
     
