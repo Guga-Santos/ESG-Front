@@ -1,9 +1,9 @@
-import { GenericChart } from "@/components/firstChart";
+import { LinesChart } from "@/components/LinesCharts";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <GenericChart 
+      <LinesChart 
       id={"apexchart-example"} 
       categories={[1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]} 
       name={"series-1"} 
@@ -11,14 +11,38 @@ export default function Home() {
       type={"area"} 
       height={200} 
       width={500} />
-      <GenericChart 
+      <LinesChart 
       id={"EEG"} 
-      categories={[2019, 2020, 2021, 2022, 2023]} 
+      categories={[2020, 2021, 2022, 2023]} 
       name={"series-1"} 
       data={[60, 124, 91, 125]} 
-      type={"area"} 
+      type={"line"} 
       height={200} 
       width={500} />
+      <LinesChart 
+      id={"EEG"} 
+      categories={[2020, 2021, 2022, 2023]} 
+      name={"series-1"} 
+      data={[60, 124, 91, 125]} 
+      type={"bar"} 
+      height={200} 
+      width={500} />
+      <LinesChart 
+      id={"EEG"} 
+      categories={[2020, 2021, 2022, 2023]} 
+      name={"ESG"} 
+      data={[60, 124, 91, 125]} 
+      type={"heatmap"} 
+      height={200} 
+      width={500} />
+      <LinesChart 
+      id={"EEG"} 
+      categories={[2020, 2021, 2022, 2023]} 
+      name={"series-1"} 
+      data={[60, 124, 91, 125]} 
+      type={"radar"} 
+      height={200} 
+      width={500} />      
     </main>
   )
 }
