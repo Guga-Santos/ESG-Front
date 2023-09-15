@@ -19,9 +19,9 @@ export default function Header() {
   return (
     <header className="w-96 lg:w-full">
       <nav className="bg-grey border-gray-200 lg:px-6 py-2.5 dark:bg-gray-800 sm-w-auto">
-        <div className="flex flex-wrap justify-between sm-w-auto items-center mx-auto max-w-screen-xl lg:p-3">
+        <div className="flex flex-wrap justify-between sm-w-screen items-center mx-auto max-w-screen-xl lg:p-3">
           <a href="" className="flex items-center">
-            <img className="h-10 lg:mr-12 sm:mr-2 rounded-xl sm:h-9 lg:w-40 md:w-40 sm:w-20" alt="Flowbite Logo" src="https://i.ibb.co/b1tbW5R/Captura-de-tela-de-2023-09-14-11-47-44.png"/>
+            <img className="ml-4 h-10 lg:mr-12 sm:mr-2 rounded-xl sm:h-9 lg:w-40 md:w-40 sm:w-20" alt="Flowbite Logo" src="https://i.ibb.co/b1tbW5R/Captura-de-tela-de-2023-09-14-11-47-44.png"/>
           </a>
           <div className="flex flex-wrap items-center lg:order-2">
             <a href="#" className="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Log in</a>
