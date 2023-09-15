@@ -26,10 +26,10 @@ export default function ChartPage(props: Partial<ILineChartProps>){
         width={400} />
 
         <LinesChart 
-         id={props.id || ""} 
-         categories={props.categories || []} 
-         name={props.name || ""} 
-         data={props.data || []} 
+        id={props.id || ""} 
+        categories={props.categories || []} 
+        name={props.name || ""} 
+        data={props.data || []} 
         type={"bar"} 
         height={200} 
         width={400} />
