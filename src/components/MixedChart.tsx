@@ -31,14 +31,14 @@ export function MixedChart(props: IMixedProps){
 
     const series = props.series
     return(
-        <>
+        <div className="text-black">
             <ApexChart 
             type={props.type} 
             options={option} 
             series={series} 
             height={props.height} 
             width={props.width} />
-        </>
+        </div>
     )
     
 }

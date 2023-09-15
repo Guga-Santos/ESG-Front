@@ -50,7 +50,7 @@ export function LinesChart(props: ILineChartProps){
       }]
 
     return(
-        <div className="mb-6">
+        <div className="mb-6 text-black">
              <ApexChart 
             type={props.type} 
             options={option} 
