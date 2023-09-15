@@ -21,6 +21,15 @@ export const getCompanies = async (): Promise<ResponseAPI[] | any> => {
   }
 }
 
+export const getCompaniesById = async (id: string): Promise<ResponseAPI | any> => {
+  try {
+    const { data } = await client.get(`/company/${id}`);
+    return data;
+  } catch (err) {
+    console.error('Error: ', err);
+  }
+}
+
 export const deleteCompany = async (id: string) => {
   try {
     await client.delete(`/company/${id}`);
@@ -31,7 +40,7 @@ export const deleteCompany = async (id: string) => {
 
 export const editCompany = async (id: string, editable: Partial<companyBody>): Promise<ResponseAPI | any> => {
   try {
-    const { data } = await client.post(`/company/${id}`, editable);
+    const { data } = await client.put(`/company/${id}`, editable);
     return data;
   } catch (err) {
     console.error('Error: ', err);

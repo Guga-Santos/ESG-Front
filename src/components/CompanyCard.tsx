@@ -24,7 +24,7 @@ export default function CompanyCard(
     items-center
     p-8">
       <div className="flex-col w-36 text-center">
-      <figure className="h-20 w-20 mt-2 m-auto">
+      <figure className="h-20 w-20 mt-2 m-auto bg-white rounded-xl">
         <img 
         alt="Logo" 
         src={logo} 

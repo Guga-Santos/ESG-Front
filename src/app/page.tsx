@@ -9,6 +9,8 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [companies, setCompanies] = useState<ResponseAPI[] | []>([]);
 
+  
+
   useEffect(() => {
     ;(async () => {
       const data = await getCompanies();
@@ -18,8 +20,8 @@ export default function Home() {
 
   return (
     <>
-      <PageContext.Provider value={{}}>
-        <main className="flex min-h-screen flex-col items-center justify-between p-2">
+      <PageContext.Provider value={{ companies }}>
+        <main className="flex min-h-screen flex-col items-center p-2">
           <Header />
           <div className="flex flex-wrap w-full p-6">
           { companies.map((company: ResponseAPI) => (
