@@ -17,8 +17,8 @@ export default function Header() {
   }
 
   return (
-    <header className="w-96 lg:w-full">
-      <nav className="bg-grey border-gray-200 lg:px-6 py-2.5 dark:bg-gray-800 sm-w-auto">
+    <header className="w-screen">
+      <nav className="bg-grey border-gray-200 lg:px-6 py-2.5 dark:bg-gray-800 sm-w-screen">
         <div className="flex flex-wrap justify-between sm-w-screen items-center mx-auto max-w-screen-xl lg:p-3">
           <a href="" className="flex items-center">
             <img className="ml-4 h-10 lg:mr-12 sm:mr-2 rounded-xl sm:h-9 lg:w-40 md:w-40 sm:w-20" alt="Flowbite Logo" src="https://i.ibb.co/b1tbW5R/Captura-de-tela-de-2023-09-14-11-47-44.png"/>
