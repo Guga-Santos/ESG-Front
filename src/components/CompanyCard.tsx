@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
-export default function CompanyProfiler(
+export default function CompanyCard(
   { logo, id, key, name } 
   : 
   { logo: string, id: string, key: string, name: string }) {
@@ -32,6 +32,7 @@ export default function CompanyProfiler(
       <h1
       className="
       text-white
+      select-none
       mt-2"
       >{name}
       </h1>

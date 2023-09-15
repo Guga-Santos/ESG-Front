@@ -1,6 +1,6 @@
 'use client'
 import { getCompanies } from "@/api/companyRequests";
-import CompanyProfiler from "@/components/CompanyProfiler";
+import CompanyCard from "@/components/CompanyCard";
 import Header from "@/components/Header";
 import { ResponseAPI } from "@/interfaces/Response.interface";
 import ChartPage from "@/pages/chartPages";
@@ -25,7 +25,7 @@ export default function Home() {
           <Header />
           <div className="flex flex-wrap w-full p-6">
           { companies.map((company: ResponseAPI) => (
-            <CompanyProfiler 
+            <CompanyCard
             logo={company.logo} 
             id={company._id} 
             key={company._id}
