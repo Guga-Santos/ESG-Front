@@ -1,7 +1,7 @@
 'use client'
 import { getCompanies } from "@/api/companyRequests";
+import CompanyProfiler from "@/components/CompanyProfiler";
 import Header from "@/components/Header";
-import CompanyProfiler from "@/components/companyProfiler";
 import { ResponseAPI } from "@/interfaces/Response.interface";
 import ChartPage from "@/pages/chartPages";
 import { PageContext } from "@/utils/PageContext";
@@ -23,12 +23,15 @@ export default function Home() {
       <PageContext.Provider value={{}}>
         <main className="flex min-h-screen flex-col items-center justify-between p-2">
           <Header />
+          <div className="flex flex-wrap w-full p-6">
           { companies.map((company: ResponseAPI) => (
             <CompanyProfiler 
             logo={company.logo} 
             id={company._id} 
-            key={company._id}/>
+            key={company._id}
+            name={company.name}/>
           ))}
+          </div>
           <ChartPage {...data.company} />
         </main>
       </PageContext.Provider>
