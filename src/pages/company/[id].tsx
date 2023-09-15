@@ -31,9 +31,9 @@ function CompanyPage() {
           <img 
           src={company?.logo} 
           alt="logo" 
-          className='rounded-md m-2 w-80' />
+          className='rounded-md m-2 w-80 lg:w-40' />
         </figure>
-        <p className='w-80 m-1 text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet natus, vitae quis quam veniam, ut voluptatem quidem ex maxime rem recusandae quia distinctio repudiandae, culpa voluptas possimus suscipit nihil sit.
+        <p className='w-80 lg:w-3/4 m-1 lg:m-3 text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet natus, vitae quis quam veniam, ut voluptatem quidem ex maxime rem recusandae quia distinctio repudiandae, culpa voluptas possimus suscipit nihil sit.
         Aliquid totam nisi consectetur tenetur est, eveniet quos incidunt officia at odit iusto hic, quo cupiditate sit velit et eos adipisci quia quaerat quasi temporibus numquam mollitia commodi?
         Expedita recusandae cupiditate iure reiciendis maiores laborum est, libero quo repellendus harum deleniti distinctio, earum officiis? Quia natus totam aliquid aut iusto quaerat?</p>
       </div>
