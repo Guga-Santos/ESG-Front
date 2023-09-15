@@ -1,10 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 
+import Link from "next/link";
+
 export default function CompanyCard(
   { logo, id, key, name } 
   : 
   { logo: string, id: string, key: string, name: string }) {
   return (
+    <Link href={`company/${id}`}>
     <div className="
     border-1 
     w-36 
@@ -38,5 +41,6 @@ export default function CompanyCard(
       </h1>
       </div>
     </div>
+    </Link>
   )
 }

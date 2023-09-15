@@ -2,8 +2,8 @@
 import { getCompanies } from "@/api/companyRequests";
 import CompanyCard from "@/components/CompanyCard";
 import Header from "@/components/Header";
+import ChartPage from "@/components/chartPages";
 import { ResponseAPI } from "@/interfaces/Response.interface";
-import ChartPage from "@/pages/chartPages";
 import { PageContext } from "@/utils/PageContext";
 import { useEffect, useState } from "react";
 import data from '../mocks/fakeData.json';
