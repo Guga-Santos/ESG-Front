@@ -23,7 +23,7 @@ export default function Home() {
       <PageContext.Provider value={{ companies }}>
         <main className="flex min-h-screen flex-col items-center p-2">
           <Header />
-          <div className="flex flex-wrap w-full p-6">
+          <div className="flex flex-wrap w-screen p-6 my-20 justify-center">
           { companies.map((company: ResponseAPI) => (
             <CompanyCard
             logo={company.logo} 

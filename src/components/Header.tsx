@@ -17,7 +17,7 @@ export default function Header() {
   }
 
   return (
-    <header className="w-screen">
+    <header className="w-screen bg-slate-900 fixed top-0 z-50">
       <nav className="bg-grey border-gray-200 lg:px-6 py-2.5 dark:bg-gray-800 sm-w-screen">
         <div className="flex flex-wrap justify-between sm-w-screen items-center mx-auto max-w-screen-xl lg:p-3">
           <a href="/" className="flex items-center">
