@@ -28,7 +28,7 @@ function CompanyPage() {
 
   return (
     <div className={styles.idPage.divContainer}>
-      <Header />
+      <Header /> 
       { !company ? <div className={styles.idPage.divLoading}><Loading/></div> 
        : <div>
           <div className={styles.idPage.divProfile}>
