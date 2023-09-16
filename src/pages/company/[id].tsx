@@ -26,7 +26,7 @@ function CompanyPage() {
   return (
     <div className='h-full text-white'>
       <Header />
-      <div className='w-3/4 flex flex-wrap m-auto justify-between'>
+      <div className='w-3/4 flex flex-wrap mx-auto mt-8 justify-between'>
         <figure className=''>
           <img 
           src={company?.logo} 
