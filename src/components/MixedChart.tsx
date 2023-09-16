@@ -16,7 +16,7 @@ export function MixedChart(props: IMixedProps){
           categories: props.categories
         },
         title: {
-          text: props.name
+          text: "ESG Mixed-Data"
         },
         stroke: {
           width: 2,

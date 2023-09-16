@@ -15,7 +15,7 @@ export function LinesChart(props: ILineChartProps){
           categories: props.categories,
         },
         title: {
-          text: props.name,
+          text: 'ESG-Data',
           margin: 10,
           offsetX: 0,
           offsetY: 0,
