@@ -2,6 +2,7 @@
 // pages/company/[id].js
 import { getCompaniesById } from '@/api/companyRequests';
 import Header from '@/components/Header';
+import Loading from '@/components/Loading';
 import ChartPage from '@/components/chartPages';
 import { ResponseAPI } from '@/interfaces/Response.interface';
 import { useRouter } from 'next/router';
@@ -27,7 +28,11 @@ function CompanyPage() {
   return (
     <div className='h-full text-white'>
       <Header />
-      <div className='w-3/4 flex flex-wrap mx-auto mt-32 mb-8 justify-between'>
+      { !company 
+      ? <div className='w-screen h-screen flex items-center justify-center'><Loading/></div> 
+       :
+       <div>
+       <div className='w-3/4 flex flex-wrap mx-auto mt-32 mb-8 justify-between'>
         <figure className=''>
           <img 
           src={company?.logo} 
@@ -39,6 +44,7 @@ function CompanyPage() {
         Expedita recusandae cupiditate iure reiciendis maiores laborum est, libero quo repellendus harum deleniti distinctio, earum officiis? Quia natus totam aliquid aut iusto quaerat?</p>
       </div>
       <ChartPage {...data.company}/>
+      </div>}
 
     </div>
   );
