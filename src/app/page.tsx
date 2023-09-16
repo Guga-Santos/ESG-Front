@@ -10,24 +10,23 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const [companies, setCompanies] = useState<ResponseAPI[] | []>([]);
-
-  
+  const [globalData, setGlobal] = useState<ResponseAPI[] | []>([]);
 
   useEffect(() => {
-  setInterval(async () => {
-    const data = await getCompanies();
-      setCompanies(data);
-  }, 2000);      
-  }, []);
+    ;(async () => {
+      const data = await getCompanies();
+      setGlobal(data);
+    })();   
+    },[]);
 
   return (
     <>
-      <PageContext.Provider value={{ companies }}>
+      <PageContext.Provider value={{ companies, setCompanies, globalData }}>
         <main className="flex min-h-screen flex-col items-center p-2">
           <Header />
           <SearchInput />
-          <div className="flex flex-wrap w-screen p-6 my-20 justify-center">
-          { companies.length == 0 ? <Loading /> : companies.map((company: ResponseAPI) => (
+          <div className="flex flex-wrap w-screen p-6 justify-center">
+          { companies?.length == 0 ? <Loading /> : companies?.map((company: ResponseAPI) => (
             <CompanyCard
             logo={company.logo} 
             id={company._id} 
