@@ -13,10 +13,10 @@ export default function Home() {
   
 
   useEffect(() => {
-    ;(async () => {
-      const data = await getCompanies();
+  setInterval(async () => {
+    const data = await getCompanies();
       setCompanies(data);
-    })();
+  }, 2000);      
   }, []);
 
   return (

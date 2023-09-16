@@ -21,6 +21,7 @@ function CompanyPage() {
       const data = await getCompaniesById(id as string);
       setCompany(data);
     })();
+    console.log("ola")
   }, [id])
 
   return (
