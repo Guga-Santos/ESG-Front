@@ -10,8 +10,6 @@ export default function SearchInput() {
 
   function handleChange(value:string) {
     setCompanies(globalData.filter((company) => company.name.includes(value)));
-    console.log("value: ", value)
-    console.log("Companies: ", companies)
   }
 
   useEffect(() => {
@@ -51,7 +49,7 @@ export default function SearchInput() {
         <input
         type="search" 
         id="default-search" 
-        className={darkmode ? "block w-full p-4 pl-10 text-sm text-gray-200 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" : "block w-full p-4 pl-10 text-sm text-gray-8 border border-gray-300 rounded-lg"} 
+        className={darkmode ? "block w-full p-4 pl-10 text-sm text-gray-200 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" : "block w-full p-4 pl-10 text-sm text-black border border-gray-300 rounded-lg"} 
         placeholder="Procure uma empresa..." 
         onChange={(e) => handleChange(e.target.value)}
         required />
