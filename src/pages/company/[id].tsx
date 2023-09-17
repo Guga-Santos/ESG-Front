@@ -13,25 +13,22 @@ import data from '../../mocks/fakeData.json';
 function CompanyPage() {
   const router = useRouter();
   const { id } = router.query;
+  const [darkmode, setDarkMode] = useState<boolean>();
 
   const [company, setCompany] = useState<ResponseAPI>();
 
 
   useEffect(() => {
+    const localData = localStorage.getItem('darkmode');
+    setDarkMode(localData === 'true');
     ;(async () => {
       const data = await getCompaniesById(id as string);
       setCompany(data);
     })();
-    console.log("ola")
   }, [id])
 
   return (
-    <div className='
-    dark
-    h-full 
-    text-white
-    dark:bg-[#00001e]
-    '>
+    <div className={darkmode ? 'dark h-full text-white dark:bg-[#00001e]' : 'h-full text-white'}>
       <Header /> 
       { !company 
       ? <div className='dark:bg-[#00001e] bg-[#d9ed92] w-screen h-screen flex items-center justify-center'>

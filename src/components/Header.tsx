@@ -1,12 +1,13 @@
 /* eslint-disable jsx-a11y/alt-text */
 'use client'
+import { PageContext } from '@/utils/PageContext';
 import isMobile from 'is-mobile';
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 /* eslint-disable @next/next/no-img-element */
 export default function Header() {
   const [hidded, setHidded] = useState<boolean>(false);
   const [isMobileDevice, setIsMobileDevice] = useState(true);
-
+  const {darkmode, setDarkmode} = useContext(PageContext);
   useEffect(() => {
     setIsMobileDevice(isMobile())
   }, [])
@@ -14,6 +15,11 @@ export default function Header() {
   function handleDrop() {
     setHidded(!hidded);
     setIsMobileDevice(!isMobileDevice);
+  }
+
+  function handleDarkMode() {
+    setDarkmode(!darkmode);
+    localStorage.setItem('darkmode', JSON.stringify(!darkmode));
   }
 
   return (
@@ -25,11 +31,29 @@ export default function Header() {
       <nav className="bg-grey border-gray-200 lg:px-6 py-2.5 dark:bg-gray-800 sm-w-screen">
         <div className="flex flex-wrap justify-between sm-w-screen items-center mx-auto max-w-screen-xl lg:p-3">
           <a href="/" className="flex items-center">
-            <img className="ml-4 h-10 lg:mr-12 sm:mr-2 rounded-xl sm:h-9 lg:w-40 md:w-40 sm:w-20" alt="Flowbite Logo" src="https://i.ibb.co/b1tbW5R/Captura-de-tela-de-2023-09-14-11-47-44.png"/>
+            <img className="ml-4 h-10 lg:mr-12 sm:mr-2 rounded-xl sm:h-9 lg:w-40 md:w-40 sm:w-20" alt="Flowbite Logo" src={!isMobileDevice ? "https://i.ibb.co/JjK8RZy/Captura-de-tela-de-2023-09-17-19-07-03.png" : "https://i.ibb.co/Wvs7gVc/Captura-de-tela-de-2023-09-17-19-07-26.png"}/>
           </a>
           <div className="flex flex-wrap items-center lg:order-2">
             <a href="#" className="text-gray-300 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Log in</a>
-            <a href="#" className="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Get </a>
+            <button
+            type="button"
+            onClick={() => handleDarkMode()}
+            className="h-10 w-14 text-white justify-center bg-transparent font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2">
+              <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 24 24" 
+              fill="black" 
+              className={darkmode ? "hidden" : "inline-block h-6 w-6"}>
+                      <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"></path>
+              </svg>
+              <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 24 24" 
+              fill="currentColor" 
+              className={!darkmode ? "hidden" : "inline-block h-5 w-5"}>
+                      <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd"></path>
+                    </svg>
+               </button>
             <button
               onClick={() => handleDrop()}
               type="button"

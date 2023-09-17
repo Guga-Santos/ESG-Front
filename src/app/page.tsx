@@ -11,8 +11,12 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [companies, setCompanies] = useState<ResponseAPI[] | []>([]);
   const [globalData, setGlobal] = useState<ResponseAPI[] | []>([]);
+  const [darkmode, setDarkmode] = useState<boolean | any>();
+
 
   useEffect(() => {
+    const localData = localStorage.getItem('darkmode');
+    setDarkmode(localData === 'true');
     ;(async () => {
       const data = await getCompanies();
       setGlobal(data);
@@ -21,15 +25,13 @@ export default function Home() {
 
   return (
     <>
-      <PageContext.Provider value={{ companies, setCompanies, globalData }}>
-        <main className="
-        flex 
-        min-h-screen 
-        flex-col 
-        items-center 
-        p-2
-        dark
-        ">
+      <PageContext.Provider value={{ 
+        companies, 
+        setCompanies, 
+        globalData, 
+        darkmode, 
+        setDarkmode }}>
+        <main className={darkmode ? "flex min-h-screen flex-col items-center p-2 dark" : "flex min-h-screen flex-col items-center p-2"}>
           <Header />
           <SearchInput />
           <div className="

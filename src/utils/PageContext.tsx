@@ -6,8 +6,12 @@ export const PageContext = createContext<{
   companies: ResponseAPI[]
   globalData: ResponseAPI[]
   setCompanies: Dispatch<SetStateAction<ResponseAPI[]>>;
+  darkmode: boolean | null;
+  setDarkmode: Dispatch<SetStateAction<boolean>>
 }>({
   companies: [],
   globalData: [],
-  setCompanies: () => {}
+  setCompanies: () => {},
+  darkmode: true,
+  setDarkmode: () => {}
 });
