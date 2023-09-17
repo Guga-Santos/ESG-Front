@@ -6,7 +6,7 @@ import { useContext, useEffect, useState } from "react";
 /* eslint-disable @next/next/no-img-element */
 export default function Header() {
   const [hidded, setHidded] = useState<boolean>(false);
-  const [isMobileDevice, setIsMobileDevice] = useState(true);
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
   const {darkmode, setDarkmode} = useContext(PageContext);
   useEffect(() => {
     setIsMobileDevice(isMobile())
