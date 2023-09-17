@@ -3,7 +3,7 @@
 import Link from "next/link";
 
 export default function CompanyCard(
-  { logo, id, key, name } 
+  { logo, id, name } 
   : 
   { logo: string, id: string, key: string, name: string }) {
   return (
@@ -14,8 +14,10 @@ export default function CompanyCard(
     h-40 
     m-2
     rounded-2xl
-    bg-slate-900
-    hover:brightness-125 
+    bg-[#FFFFFF]
+    dark:bg-slate-900
+    shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]
+    hover:shadow-[rgba(0,_0,_0,_0.4)_0px_3px_8px]
     hover:cursor-pointer
     active:brightness-150
     flex
@@ -34,7 +36,8 @@ export default function CompanyCard(
       </figure>
       <h1
       className="
-      text-white
+      text-[#184E77]
+      dark:text-white
       select-none
       text-base
       mt-2"

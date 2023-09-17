@@ -26,11 +26,32 @@ function CompanyPage() {
   }, [id])
 
   return (
-    <div className='h-full text-white'>
+    <div className='
+    dark
+    h-full 
+    text-white
+    dark:bg-[#00001e]
+    '>
       <Header /> 
-      { !company ? <div className='w-screen h-screen flex items-center justify-center'><Loading/></div> 
-       : <div>
-          <div className='w-3/4 flex flex-wrap mx-auto mt-32 mb-8 justify-between'>
+      { !company 
+      ? <div className='dark:bg-[#00001e] bg-[#d9ed92] w-screen h-screen flex items-center justify-center'>
+        <Loading/>
+        </div> 
+      : <div className='
+       dark:bg-[#00001e] 
+       bg-[#d9ed92]'>
+          <div className='
+          w-3/4 
+          flex 
+          flex-wrap 
+          mx-auto 
+          pt-32 
+          mb-8 
+          justify-between
+          text-[#184E77]
+          dark:text-white
+          dark:bg-[#00001e]
+          '>
             <figure>
               <img 
               src={company?.logo} 

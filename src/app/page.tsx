@@ -22,11 +22,27 @@ export default function Home() {
   return (
     <>
       <PageContext.Provider value={{ companies, setCompanies, globalData }}>
-        <main className="flex min-h-screen flex-col items-center p-2">
+        <main className="
+        flex 
+        min-h-screen 
+        flex-col 
+        items-center 
+        p-2
+        dark
+        ">
           <Header />
           <SearchInput />
-          <div className="flex flex-wrap w-screen p-6 justify-center">
-          { companies?.length == 0 ? <Loading /> : companies?.map((company: ResponseAPI) => (
+          <div className="
+          flex 
+          flex-wrap 
+          w-screen 
+          p-6 
+          justify-center
+          bg-[#d9ed92]
+          dark:bg-[#00001e]">
+          { companies?.length == 0 
+          ? <div className='dark:bg-[#00001e] bg-[#d9ed92] w-screen h-screen flex  justify-center'><Loading /></div> 
+          : companies?.map((company: ResponseAPI) => (
             <CompanyCard
             logo={company.logo} 
             id={company._id} 
