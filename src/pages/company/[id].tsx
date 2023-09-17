@@ -17,6 +17,10 @@ function CompanyPage() {
 
   const [company, setCompany] = useState<ResponseAPI>();
 
+  function handleClick() {
+    window.open(company?.data, '_blank');
+  }
+
 
   useEffect(() => {
     const localData = localStorage.getItem('darkmode');
@@ -58,6 +62,14 @@ function CompanyPage() {
             <p className='w-80 lg:w-3/4 m-1 lg:m-3 text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet natus, vitae quis quam veniam, ut voluptatem quidem ex maxime rem recusandae quia distinctio repudiandae, culpa voluptas possimus suscipit nihil sit.
             Aliquid totam nisi consectetur tenetur est, eveniet quos incidunt officia at odit iusto hic, quo cupiditate sit velit et eos adipisci quia quaerat quasi temporibus numquam mollitia commodi?
             Expedita recusandae cupiditate iure reiciendis maiores laborum est, libero quo repellendus harum deleniti distinctio, earum officiis? Quia natus totam aliquid aut iusto quaerat?</p>
+
+            <button
+            type="button"
+            onClick={() => handleClick()}
+            className="mb-2 block w-full rounded border-2 border-primary px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-primary transition duration-150 ease-in-out hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-primary-600 focus:border-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:border-primary-700 active:text-primary-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+            data-te-ripple-init>
+            Acesse o relatório completo!
+          </button>
           </div>
           <ChartPage {...data.company}/>
         </div>}
