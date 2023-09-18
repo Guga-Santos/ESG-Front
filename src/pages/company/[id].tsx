@@ -3,7 +3,7 @@
 import { getCompaniesById } from '@/api/companyRequests';
 import Header from '@/components/Header';
 import Loading from '@/components/Loading';
-import ChartPage from '@/components/chartPages';
+import ChartBoard from '@/components/chartBoard';
 import { ResponseAPI } from '@/interfaces/Response.interface';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -71,7 +71,7 @@ function CompanyPage() {
             Acesse o relatório completo!
           </button>
           </div>
-          <ChartPage {...data.company}/>
+          <ChartBoard {...data.company}/>
         </div>}
     </div>
   );

@@ -2,11 +2,9 @@ import { LinesChart } from "@/components/LinesCharts";
 import { MixedChart } from "@/components/MixedChart";
 import { ILineChartProps } from "@/interfaces/chartProps";
 
-export default function ChartPage(props: Partial<ILineChartProps>){
+export default function ChartBoard(props: Partial<ILineChartProps>){
   return(
     <div className="flex min-h-screen flex-wrap items-center justify-evenly p-12">
-      
-
         <LinesChart 
         id={props.id || ""} 
         categories={props.categories || []} 
