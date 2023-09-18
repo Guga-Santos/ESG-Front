@@ -4,6 +4,7 @@ import CompanyCard from "@/components/CompanyCard";
 import Header from "@/components/Header";
 import Loading from "@/components/Loading";
 import SearchInput from "@/components/SearchInput";
+import Slider from "@/components/Slider";
 import { ResponseAPI } from "@/interfaces/Response.interface";
 import { PageContext } from "@/utils/PageContext";
 import { useEffect, useState } from "react";
@@ -33,6 +34,7 @@ export default function Home() {
         setDarkmode }}>
         <main className={darkmode ? "flex min-h-screen flex-col items-center p-2 dark" : "flex min-h-screen flex-col items-center p-2"}>
           <Header />
+          <Slider />
           <SearchInput />
           <div className="
           flex 

@@ -57,7 +57,7 @@ export function LinesChart(props: ILineChartProps){
             series={series} 
             height={props.height} 
             width={props.width}
-            animate />
+            animate="true" />
         </div>
     )
     
