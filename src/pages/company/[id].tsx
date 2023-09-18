@@ -34,12 +34,10 @@ function CompanyPage() {
     <div className={darkmode ? 'dark h-full text-white dark:bg-[#00001e]' : 'h-full text-white'}>
       <Header /> 
       { !company 
-      ? <div className='dark:bg-[#00001e] bg-[#d9ed92] w-screen h-screen flex items-center justify-center'>
+      ? <div className='bg-[#d9ed92] dark:bg-[#00001e] w-screen h-screen flex items-center justify-center'>
         <Loading/>
         </div> 
-      : <div className='
-       dark:bg-[#00001e] 
-       bg-[#d9ed92]'>
+      : <div className='bg-[#d9ed92] dark:bg-[#00001e]'>
           <div className='
           w-3/4 
           flex 

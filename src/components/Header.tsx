@@ -16,7 +16,6 @@ export default function Header() {
     const localData = localStorage.getItem('darkmode');
     setDarkmode(localData === 'true');
     setDuble(localData === 'true');
-    console.log(window.location)
   }, [setDarkmode])
 
   function handleDrop() {
