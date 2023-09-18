@@ -6,6 +6,7 @@ import Loading from "@/components/Loading";
 import SearchInput from "@/components/SearchInput";
 import Slider from "@/components/Slider";
 import { ResponseAPI } from "@/interfaces/Response.interface";
+import { pageStyles } from "@/styles/page.styles";
 import { PageContext } from "@/utils/PageContext";
 import { useEffect, useState } from "react";
 
@@ -32,20 +33,13 @@ export default function Home() {
         globalData, 
         darkmode, 
         setDarkmode }}>
-        <main className={darkmode ? "flex min-h-screen flex-col items-center p-2 dark" : "flex min-h-screen flex-col items-center p-2"}>
+        <main className={darkmode ? pageStyles.mainDark : pageStyles.mainLight }>
           <Header />
           <Slider />
           <SearchInput />
-          <div className="
-          flex 
-          flex-wrap 
-          w-screen 
-          p-6 
-          justify-center
-          bg-[#d9ed92]
-          dark:bg-[#00001e]">
+          <div className={pageStyles.companiesDiv}>
           { companies?.length == 0 
-          ? <div className='dark:bg-[#00001e] bg-[#d9ed92] w-screen h-screen flex  justify-center'><Loading /></div> 
+          ? <div className={pageStyles.loadingDiv}><Loading /></div> 
           : companies?.map((company: ResponseAPI) => (
             <CompanyCard
             logo={company.logo} 
