@@ -10,8 +10,10 @@ export default function Header() {
   const [isMobileDevice, setIsMobileDevice] = useState(false);
   const {darkmode, setDarkmode} = useContext(PageContext);
   useEffect(() => {
-    setIsMobileDevice(isMobile())
-  }, [])
+    setIsMobileDevice(isMobile());
+    const localData = localStorage.getItem('darkmode');
+    setDarkmode(localData === 'true');
+  }, [setDarkmode])
 
   function handleDrop() {
     setHidded(!hidded);

@@ -12,6 +12,6 @@ export const PageContext = createContext<{
   companies: [],
   globalData: [],
   setCompanies: () => {},
-  darkmode: true,
+  darkmode: false,
   setDarkmode: () => {}
 });

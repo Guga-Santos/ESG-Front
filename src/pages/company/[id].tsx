@@ -14,7 +14,6 @@ function CompanyPage() {
   const router = useRouter();
   const { id } = router.query;
   const [darkmode, setDarkMode] = useState<boolean>();
-
   const [company, setCompany] = useState<ResponseAPI>();
 
   function handleClick() {
@@ -33,7 +32,7 @@ function CompanyPage() {
 
   return (
     <div className={darkmode ? 'dark h-full text-white dark:bg-[#00001e]' : 'h-full text-white'}>
-      <Header /> 
+      <Header dark={setDarkMode}/> 
       { !company 
       ? <div className='dark:bg-[#00001e] bg-[#d9ed92] w-screen h-screen flex items-center justify-center'>
         <Loading/>
