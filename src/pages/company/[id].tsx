@@ -22,11 +22,11 @@ function CompanyPage() {
 
 
   useEffect(() => {
-    const localData = localStorage.getItem('darkmode');
-    setDarkMode(localData === 'true');
     ;(async () => {
       const data = await getCompaniesById(id as string);
       setCompany(data);
+      const localData = localStorage.getItem('darkmode');
+      setDarkMode(localData === 'true');
     })();
   }, [id])
 
@@ -47,6 +47,7 @@ function CompanyPage() {
           mb-8 
           justify-between
           text-[#184E77]
+          bg-[#d9ed92]
           dark:text-white
           dark:bg-[#00001e]
           '>
