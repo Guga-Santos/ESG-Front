@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Loading from '@/components/Loading';
 import ChartBoard from '@/components/chartBoard';
 import { ResponseAPI } from '@/interfaces/Response.interface';
+import { addLocalStorageChangeListener, removeLocalStorageChangeListener } from '@/utils/localStorageEvents';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import data from '../../mocks/fakeData.json';
@@ -28,11 +29,22 @@ function CompanyPage() {
       const data = await getCompaniesById(id as string);
       setCompany(data);
     })();
+
+    const handleLocalStorageChange = () => {
+      // Faça o que for necessário quando o localStorage mudar
+      console.log('LocalStorage mudou!');
+    };
+
+    addLocalStorageChangeListener(handleLocalStorageChange);
+
+    return () => {
+      removeLocalStorageChangeListener(handleLocalStorageChange);
+    };
   }, [id])
 
   return (
     <div className={darkmode ? 'dark h-full text-white dark:bg-[#00001e]' : 'h-full text-white'}>
-      <Header dark={setDarkMode}/> 
+      <Header /> 
       { !company 
       ? <div className='dark:bg-[#00001e] bg-[#d9ed92] w-screen h-screen flex items-center justify-center'>
         <Loading/>
