@@ -31,7 +31,7 @@ function CompanyPage() {
   }, [id])
 
   return (
-    <div className={darkmode ? 'dark h-full text-white dark:bg-[#00001e]' : 'h-full text-white'}>
+    <div className={darkmode ? 'dark h-full text-white dark:bg-[#00001e]' : 'h-full text-white bg-[#d9ed92]'}>
       <Header /> 
       { !company 
       ? <div className='bg-[#d9ed92] dark:bg-[#00001e] w-screen h-screen flex items-center justify-center'>
