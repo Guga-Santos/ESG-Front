@@ -26,7 +26,7 @@ export const getCompaniesById = async (id: string): Promise<ResponseAPI | any> =
     const { data } = await client.get(`/company/${id}`);
     return data;
   } catch (err) {
-    console.error('Error: ', err);
+    return
   }
 }
 
