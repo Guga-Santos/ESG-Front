@@ -31,26 +31,14 @@ function CompanyPage() {
   }, [id])
 
   return (
-    <div className={darkmode ? 'dark h-full text-white dark:bg-[#00001e]' : 'h-full text-white bg-[#d9ed92]'}>
+    <div className={darkmode ? 'dark h-full text-white bg-[#00001e]' : 'h-full text-white bg-[#d9ed92]'}>
       <Header /> 
       { !company 
-      ? <div className='bg-[#d9ed92] dark:bg-[#00001e] w-screen h-screen flex items-center justify-center'>
+      ? <div className={darkmode ? 'bg-[#00001e] w-screen h-screen flex items-center justify-center' : 'bg-[#d9ed92] w-screen h-screen flex items-center justify-center'}>
         <Loading/>
         </div> 
-      : <div className='bg-[#d9ed92] dark:bg-[#00001e]'>
-          <div className='
-          w-3/4 
-          flex 
-          flex-wrap 
-          mx-auto 
-          pt-32 
-          mb-8 
-          justify-between
-          text-[#184E77]
-          bg-[#d9ed92]
-          dark:text-white
-          dark:bg-[#00001e]
-          '>
+      : <div className={darkmode ? 'bg-[#00001e]' : 'bg-[#d9ed92]' }>
+          <div className={darkmode ? 'w-3/4 flex flex-wrap mx-auto pt-32 mb-8 justify-between text-white bg-[#00001e]' : 'w-3/4 flex flex-wrap mx-auto pt-32 mb-8 justify-between text-[#184E77] bg-[#d9ed92]'}>
             <figure>
               <img 
               src={company?.logo} 
