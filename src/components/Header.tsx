@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/alt-text */
-'use client'
 import { headerSRC, headerStyle } from '@/styles/Header.styles';
 import { PageContext } from '@/utils/PageContext';
 import isMobile from 'is-mobile';
@@ -9,10 +8,14 @@ export default function Header() {
   const [hidded, setHidded] = useState<boolean>(false);
   const [isMobileDevice, setIsMobileDevice] = useState(false);
   const {darkmode, setDarkmode} = useContext(PageContext);
+  const [duble, setDuble] = useState<boolean | null>();
+  
+
   useEffect(() => {
     setIsMobileDevice(isMobile());
     const localData = localStorage.getItem('darkmode');
     setDarkmode(localData === 'true');
+    setDuble(localData === 'true');
   }, [setDarkmode])
 
   function handleDrop() {
@@ -22,7 +25,9 @@ export default function Header() {
 
   function handleDarkMode() {
     setDarkmode(!darkmode);
-    localStorage.setItem('darkmode', JSON.stringify(!darkmode));
+    setDuble(!duble)
+    localStorage.setItem('darkmode', JSON.stringify(!duble));
+    window.location.reload();
   }
 
   return (
@@ -42,14 +47,14 @@ export default function Header() {
               xmlns="http://www.w3.org/2000/svg" 
               viewBox="0 0 24 24" 
               fill="black" 
-              className={darkmode ? "hidden" : "inline-block h-6 w-6"}>
+              className={duble ? "hidden" : "inline-block h-6 w-6"}>
                 <path d={headerStyle.sunPath}></path>
               </svg>
               <svg 
               xmlns="http://www.w3.org/2000/svg" 
               viewBox="0 0 24 24" 
               fill="currentColor" 
-              className={!darkmode ? "hidden" : "inline-block h-5 w-5"}>
+              className={!duble ? "hidden" : "inline-block h-5 w-5"}>
                 <path fillRule="evenodd" d={headerStyle.moonPath} clipRule="evenodd"></path>
               </svg>
             </button>
