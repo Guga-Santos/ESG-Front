@@ -6,7 +6,7 @@ import { useContext, useEffect, useState } from "react";
 /* eslint-disable @next/next/no-img-element */
 export default function Header() {
   const [hidded, setHidded] = useState<boolean>(false);
-  const [isMobileDevice, setIsMobileDevice] = useState(false);
+  const [isMobileDevice, setIsMobileDevice] = useState<boolean>();
   const {darkmode, setDarkmode} = useContext(PageContext);
   const [duble, setDuble] = useState<boolean | null>();
   
@@ -16,6 +16,7 @@ export default function Header() {
     const localData = localStorage.getItem('darkmode');
     setDarkmode(localData === 'true');
     setDuble(localData === 'true');
+    console.log(window.location)
   }, [setDarkmode])
 
   function handleDrop() {
@@ -27,7 +28,9 @@ export default function Header() {
     setDarkmode(!darkmode);
     setDuble(!duble)
     localStorage.setItem('darkmode', JSON.stringify(!duble));
-    window.location.reload();
+    if (window.location.pathname !== '/') {
+      window.location.reload();
+    }
   }
 
   return (
