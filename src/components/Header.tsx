@@ -2,6 +2,7 @@
 import { headerSRC, headerStyle } from '@/styles/Header.styles';
 import { PageContext } from '@/utils/PageContext';
 import isMobile from 'is-mobile';
+import Link from 'next/link';
 import { useContext, useEffect, useState } from "react";
 /* eslint-disable @next/next/no-img-element */
 export default function Header() {
@@ -78,16 +79,24 @@ export default function Header() {
                 <a href="/" className={headerStyle.liHome} aria-current="page">Home</a>
               </li>
               <li>
-                <a href="#" className={headerStyle.li}>Sobre</a>
+                <Link href="/about" className={headerStyle.li}>
+                 About
+                </Link>
               </li>
               <li>
-                <a href="#" className={headerStyle.li}>Setores</a>
+              <Link href="/esg" className={headerStyle.li}>
+                 ESG
+                </Link>
               </li>
               <li>
-                <a href="#" className={headerStyle.li}>Empresas</a>
+              <Link href="/ods" className={headerStyle.li}>
+                 ODS
+                </Link>
               </li>
               <li>
-                <a href="#" className={headerStyle.li}>Team</a>
+              <Link href="/team" className={headerStyle.li}>
+                 Team
+                </Link>
               </li>
             </ul>
           </div>
