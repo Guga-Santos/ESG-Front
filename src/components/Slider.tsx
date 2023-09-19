@@ -15,11 +15,11 @@ export default function Slider() {
 
   return (
     <div className={isMobileDevice 
-    ? 'flex flex-col min-h-screen relative bg-[#d9ed92] -mb-56' 
+    ? 'flex flex-col min-h-screen relative bg-[#d9ed92] -mb-40' 
     : 'flex flex-col min-h-screen relative bg-[#d9ed92] -mb-12'}>
       <div className={isMobileDevice ? "w-screen pt-12 min-h-[80%]" : "w-screen"}>
           <img 
-          className={isMobileDevice ? "fixed w-screen h-2/3 object-cover" : "fixed w-screen h-full object-cover mt-12"}
+          className={isMobileDevice ? "fixed w-screen h-4/5 object-cover" : "fixed w-screen h-full object-cover mt-12"}
           src={isMobileDevice 
           ? "https://i.pinimg.com/564x/16/5a/cc/165acc364c6c56e52108cb7efe92ea70.jpg" 
           : "https://mercadoeconsumo.com.br/wp-content/uploads/2022/06/M3rc4doConsumo-shutterstock_2053227626.jpg"} alt="..." />
