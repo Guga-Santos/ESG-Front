@@ -18,20 +18,18 @@ export default function Slider() {
     <div className={isMobileDevice 
     ? 'flex flex-col min-h-screen relative bg-[#d9ed92] -mb-40' 
     : 'flex flex-col min-h-screen relative bg-[#d9ed92] -mb-12'}>
-      <PageWrapper>
       <div className={isMobileDevice ? "w-screen pt-12 min-h-[80%]" : "w-screen"}>
+        <PageWrapper>
           <img 
-          loading='lazy'
           className={isMobileDevice ? "fixed w-screen h-4/5 object-cover" : "fixed w-screen h-full object-cover mt-12"}
           src={isMobileDevice 
           ? "https://i.pinimg.com/564x/16/5a/cc/165acc364c6c56e52108cb7efe92ea70.jpg" 
           : "https://mercadoeconsumo.com.br/wp-content/uploads/2022/06/M3rc4doConsumo-shutterstock_2053227626.jpg"} alt="..." />
-
+        </PageWrapper>
       </div>
-      </PageWrapper>
       <div 
       className={isMobileDevice 
-      ? `${!darkmode ? 'bg-[#00001e]' : 'bg-[#d9ed92]'} waveOneMobil w-screen h-1/2 z-20 absolute top-80`
+      ? `${!darkmode ? 'bg-[#00001e]' : 'bg-[#d9ed92]'} waveOneMobil w-screen h-1/2 z-10 absolute top-80`
       : `${!darkmode ? 'waveOne bg-[#00001e]' : 'waveThree bg-[#d9ed92]'} w-screen h-1/2 z-10 absolute top-80 mt-4`} />
       <div className={isMobileDevice 
         ? 'waveTwoMobil  w-screen bg-white h-2/3 z-10 absolute top-96 -mt-36' 
