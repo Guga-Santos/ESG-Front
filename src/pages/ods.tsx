@@ -26,7 +26,7 @@ export default function Ods() {
       <div className={`topWave ${darkmode ? 'bg-[#d9ed92]' : 'bg-[#00001e]'} h-80 ${isMobileDevice ? "mt-12" : "mt-20 -mb-52"}`} />
       <OdsTexts />
 
-      <div className={`flex flex-wrap gap-4 justify-center p-8 absolute ${isMobileDevice ? "top-[56%]" : "top-[68%]"}`}>
+      <div className={`flex flex-wrap gap-4 justify-center p-8  ${isMobileDevice ? "top-[56%]" : "top-[68%]"}`}>
       {ods.map((path, index) => (
         <PageWrapper key={index}>
           <img 
