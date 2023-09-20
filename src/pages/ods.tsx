@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Header from "@/components/Header";
 import OdsTexts from "@/components/OdsTexts";
+import PageWrapper from "@/utils/PageWrapper";
 import isMobile from 'is-mobile';
 import { useEffect, useState } from "react";
 import ods from '../../public/images/ODS/odsPaths.json';
@@ -27,17 +28,19 @@ export default function Ods() {
 
       <div className={`flex flex-wrap gap-4 justify-center p-8 absolute ${isMobileDevice ? "top-[56%]" : "top-[68%]"}`}>
       {ods.map((path, index) => (
-        <img 
-        src={path} 
-        alt="ods image" 
-        key={index}
-        width={160}
-        height={160}
-        onClick={() => setClick(!click)}
-        className="
-        shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] 
-        hover:shadow-[rgba(50,50,93,0.5)_0px_6px_12px_-2px,_rgba(0,0,0,0.5)_0px_3px_7px_-3px] 
-        active:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] cursor-pointer"/>
+        <PageWrapper key={index}>
+          <img 
+          src={path} 
+          alt="ods image" 
+          key={index}
+          width={160}
+          height={160}
+          onClick={() => setClick(!click)}
+          className="
+          shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] 
+          hover:shadow-[rgba(50,50,93,0.5)_0px_6px_12px_-2px,_rgba(0,0,0,0.5)_0px_3px_7px_-3px] 
+          active:shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] cursor-pointer"/>
+        </PageWrapper>
       ))}
       </div>
       {
