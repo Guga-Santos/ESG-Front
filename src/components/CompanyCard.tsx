@@ -1,13 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { companyCardStyles } from "@/styles/CompanyCard.styles";
+import PageWrapper from "@/utils/PageWrapper";
+import { useScroll } from "framer-motion";
 import Link from "next/link";
 
 export default function CompanyCard(
   { logo, id, name } 
   : 
   { logo: string, id: string, key: string, name: string }) {
+
+    const { scrollYProgress } = useScroll();
   return (
+    <PageWrapper>
     <Link href={`company/${id}`}>
     <div className={companyCardStyles.firstDiv}>
       <div className="flex-col w-36 text-center">
@@ -24,5 +29,6 @@ export default function CompanyCard(
       </div>
     </div>
     </Link>
+    </PageWrapper>
   )
 }

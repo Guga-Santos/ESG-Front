@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { PageContext } from '@/utils/PageContext';
+import PageWrapper from '@/utils/PageWrapper';
 import isMobile from 'is-mobile';
 import { useContext, useEffect, useState } from 'react';
 
@@ -17,6 +18,7 @@ export default function Slider() {
     <div className={isMobileDevice 
     ? 'flex flex-col min-h-screen relative bg-[#d9ed92] -mb-40' 
     : 'flex flex-col min-h-screen relative bg-[#d9ed92] -mb-12'}>
+      <PageWrapper>
       <div className={isMobileDevice ? "w-screen pt-12 min-h-[80%]" : "w-screen"}>
           <img 
           loading='lazy'
@@ -26,6 +28,7 @@ export default function Slider() {
           : "https://mercadoeconsumo.com.br/wp-content/uploads/2022/06/M3rc4doConsumo-shutterstock_2053227626.jpg"} alt="..." />
 
       </div>
+      </PageWrapper>
       <div 
       className={isMobileDevice 
       ? `${!darkmode ? 'bg-[#00001e]' : 'bg-[#d9ed92]'} waveOneMobil w-screen h-1/2 z-20 absolute top-80`
