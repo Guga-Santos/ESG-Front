@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Header from "@/components/Header";
+import PageWrapper from "@/utils/PageWrapper";
 import isMobile from 'is-mobile';
 import { useEffect, useState } from "react";
 
@@ -20,6 +21,7 @@ export default function About() {
     className={`${darkmode ? 'dark': ''} w-screen bg-[#d9ed92] absolute flex flex-col`}>
       <Header />
 
+      <PageWrapper>
       <div 
       className={`${darkmode ? "bg-[#00001e]" : "bg-[#d9ed92]"} w-screen h-screen ${isMobileDevice ? 'mt-12' : 'mt-20'} relative`}>
         
@@ -107,6 +109,7 @@ export default function About() {
          </div>
 
       </div>
+    </PageWrapper>
 
     </div>
   )
