@@ -10,9 +10,12 @@ export default function Header() {
   const [isMobileDevice, setIsMobileDevice] = useState<boolean>(false);
   const {darkmode, setDarkmode} = useContext(PageContext);
   const [duble, setDuble] = useState<boolean | null>();
-  
+  const[path, setPath] = useState<string>('');
 
+  
+  
   useEffect(() => {
+    setPath(window.location.pathname);
     setIsMobileDevice(isMobile());
     const localData = localStorage.getItem('darkmode');
     setDarkmode(localData === 'true');
@@ -76,25 +79,25 @@ export default function Header() {
           <div className={isMobileDevice ? "hidden" : headerStyle.dropDiv} id="mobile-menu-2">
             <ul className={headerStyle.ul}>
               <li>
-                <a href="/" className={headerStyle.liHome} aria-current="page">Home</a>
+                <a href="/" className={path === '/' ? headerStyle.liActive : headerStyle.li} >Home</a>
               </li>
               <li>
-                <Link href="/about" className={headerStyle.li}>
+                <Link href="/about" className={path === '/about' ? headerStyle.liActive : headerStyle.li}>
                  About
                 </Link>
               </li>
               <li>
-              <Link href="/esg" className={headerStyle.li}>
+              <Link href="/esg" className={path === '/esg' ? headerStyle.liActive : headerStyle.li}>
                  ESG
                 </Link>
               </li>
               <li>
-              <Link href="/ods" className={headerStyle.li}>
+              <Link href="/ods" className={path === '/ods' ? headerStyle.liActive : headerStyle.li}>
                  ODS
                 </Link>
               </li>
               <li>
-              <Link href="/team" className={headerStyle.li}>
+              <Link href="/team" className={path === '/team' ? headerStyle.liActive : headerStyle.li}>
                  Team
                 </Link>
               </li>
