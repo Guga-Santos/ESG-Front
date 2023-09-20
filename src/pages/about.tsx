@@ -21,11 +21,11 @@ export default function About() {
     className={`${darkmode ? 'dark': ''} w-screen bg-[#d9ed92] absolute flex flex-col`}>
       <Header />
 
-      <PageWrapper>
       <div 
-      className={`${darkmode ? "bg-[#00001e]" : "bg-[#d9ed92]"} w-screen h-screen ${isMobileDevice ? 'mt-12' : 'mt-20'} relative`}>
+      className={`${darkmode ? "bg-[#00001e]" : "bg-[#d9ed92] text-[#00001e]"} w-screen h-screen ${isMobileDevice ? 'mt-12' : 'mt-20'} relative`}>
         
         <div className={`topWave ${darkmode ? "bg-[#d9ed92]" : "bg-[#00001e]"} h-80`}/>
+        <PageWrapper>
         <div className="flex justify-between">
           <div className={isMobileDevice ? "w-screen p-10 absolute top-12" : "absolute w-[50%] top-28 right-[10%]"}>
             <h1 className={isMobileDevice ? "my-2 text-3xl" : "my-8 text-5xl"}>SOBRE NÓS</h1>
@@ -37,12 +37,12 @@ export default function About() {
           alt="svg" 
           className={isMobileDevice ? "absolute bottom-16" : "h-3/4 absolute top-10"} />
         </div>
+        </PageWrapper>
       </div>
-
-
       <div 
-      className={`${darkmode ?  "bg-[#d9ed92]" : "bg-[#00001e]"} w-screen h-screen relative`}>
+      className={`${darkmode ?  "bg-[#d9ed92] text-[#00001e]" : "bg-[#00001e]"} w-screen h-screen relative`}>
         <div className={`topWave ${!darkmode ? "bg-[#d9ed92]" : "bg-[#00001e]"} h-80 -mt-2`}/>
+        <PageWrapper>
           <div className="flex justify-between bg-[#00001e]">
             <div className={isMobileDevice ? "w-screen p-10 absolute top-[5%]" : "absolute w-[50%] top-[25%] left-[5%]"}>
               <h1 className={isMobileDevice ? "my-2 text-3xl" : "my-8 text-5xl"}>QUEM SOMOS</h1>
@@ -54,12 +54,12 @@ export default function About() {
             alt="svg" 
             className={isMobileDevice ? "absolute top-[50%]" : "h-3/4 absolute top-[25%] right-[5%]"} />
          </div>
+        </PageWrapper>
       </div>
-
-      
       <div 
-      className={`${darkmode ? "bg-[#00001e]" : "bg-[#d9ed92]"} w-screen h-screen relative`}>
+      className={`${darkmode ? "bg-[#00001e]" : "bg-[#d9ed92] text-[#00001e]"} w-screen h-screen relative`}>
         <div className={`topWave ${darkmode ? "bg-[#d9ed92]" : "bg-[#00001e]"} h-80`}/>
+        <PageWrapper>
         <div className="flex justify-between bg-[#00001e]">
             <div className={isMobileDevice ? "w-screen p-10 absolute top-[5%]" : "absolute w-[50%] top-[25%] right-[5%]"}>
               <h1 className={isMobileDevice ? "my-2 text-3xl" : "my-8 text-5xl"}>NOSSA MISSÃO</h1>
@@ -71,13 +71,12 @@ export default function About() {
             alt="svg" 
             className={isMobileDevice ? "absolute top-[50%]" : "h-3/4 absolute top-[25%] left-[5%]"} />
          </div>
-
+        </PageWrapper>
       </div>
-
-
       <div 
-      className={`${darkmode ?  "bg-[#d9ed92]" : "bg-[#00001e]"} w-screen h-screen relative`}>
+      className={`${darkmode ?  "bg-[#d9ed92] text-[#00001e]" : "bg-[#00001e]"} w-screen h-screen relative`}>
         <div className={`topWave ${!darkmode ? "bg-[#d9ed92]" : "bg-[#00001e]"} h-80 -mt-2`}/>
+        <PageWrapper>
           <div className="flex justify-between bg-[#00001e]">
             <div className={isMobileDevice ? "w-screen p-10 absolute top-[5%]" : "absolute w-[50%] top-[25%] left-[5%]"}>
               <h1 className={isMobileDevice ? "my-2 text-3xl" : "my-8 text-5xl"}>O QUE FAZEMOS</h1>
@@ -89,11 +88,12 @@ export default function About() {
             alt="svg" 
             className={isMobileDevice ? "absolute top-[50%]" : "h-3/4 absolute top-[25%] right-[5%]"} />
          </div>
+        </PageWrapper>
       </div>
-
       <div 
-      className={`${darkmode ? "bg-[#00001e]" : "bg-[#d9ed92]"} w-screen h-screen relative`}>
+      className={`${darkmode ? "bg-[#00001e]" : "bg-[#d9ed92] text-[#00001e]"} w-screen h-screen relative`}>
         <div className={`topWave ${darkmode ? "bg-[#d9ed92]" : "bg-[#00001e]"} h-80 -mt-2`}/>
+        <PageWrapper>
         <div className="flex justify-between bg-[#00001e]">
             <div className={isMobileDevice ? "w-screen p-10 absolute top-[5%]" : "absolute w-[50%] top-[25%] right-[5%]"}>
               <h1 className={isMobileDevice ? "my-2 text-3xl" : "my-8 text-5xl"}>Junte-se a Nós!!</h1>
@@ -107,9 +107,8 @@ export default function About() {
             alt="svg" 
             className={isMobileDevice ? "absolute top-[50%]" : "h-3/4 absolute top-[25%] left-[5%]"} />
          </div>
-
+        </PageWrapper>
       </div>
-    </PageWrapper>
 
     </div>
   )
