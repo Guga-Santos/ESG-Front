@@ -23,7 +23,7 @@ export default function Ods() {
  
         <div className={`topWave bg-[#00001e] h-80 ${isMobileDevice ? "mt-12" : "mt-20"}`} />
 
-      <div className={`flex flex-wrap gap-6 justify-center p-12 absolute ${isMobileDevice ? "top-[10%]" : "top-[20%]"}`}>
+      <div className={`flex flex-wrap gap-4 justify-center p-8 absolute ${isMobileDevice ? "top-[10%]" : "top-[20%]"}`}>
       {ods.map((path, index) => (
         <img 
         src={path} 
