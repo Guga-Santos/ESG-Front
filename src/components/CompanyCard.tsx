@@ -12,7 +12,13 @@ export default function CompanyCard(
     <div className={companyCardStyles.firstDiv}>
       <div className="flex-col w-36 text-center">
       <figure className="h-24 w-24 mt-2 m-auto rounded-xl">
-        <img alt="Logo" src={logo} width={200} height={200} className="rounded-lg select-none"/>
+        <img 
+        alt="Logo" 
+        src={logo} 
+        width={200} 
+        height={200}
+        loading="lazy" 
+        className="rounded-lg select-none"/>
       </figure>
       <h1 className={companyCardStyles.h1}>{name}</h1>
       </div>
