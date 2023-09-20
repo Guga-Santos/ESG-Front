@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import Header from "@/components/Header";
 import isMobile from 'is-mobile';
 import { useEffect, useState } from "react";
+import ods from '../../public/images/ODS/odsPaths.json';
 
 export default function Ods() {
   const [darkmode, setDarkMode] = useState<boolean>();
@@ -18,9 +20,18 @@ export default function Ods() {
     <div 
     className={`${darkmode ? 'dark': ''} w-screen min-h-screen bg-[#d9ed92] absolute flex flex-col`}>
       <Header />
-      <div className={`bg-white w-screen h-screen ${isMobileDevice ? 'mt-12' : 'mt-20'} relative`}>
-        <div className="topWave bg-[#00001e] h-80" />
-        <h1 className={`text-[#00001e] ${isMobileDevice ? 'text-xl' : 'text-4xl'} absolute top-[15%] left-[10%]`}>O QUE SÃO AS ODS?</h1>
+ 
+        <div className={`topWave bg-[#00001e] h-80 ${isMobileDevice ? "mt-12" : "mt-20"}`} />
+
+      <div className="flex flex-wrap gap-6 justify-center p-12">
+      {ods.map((path, index) => (
+        <img 
+        src={path} 
+        alt="ods image" 
+        key={index}
+        width={160}
+        height={160}/>
+      ))}
       </div>
     </div>
   )
