@@ -28,6 +28,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "framer-motion": "^10.16.4",
     "tw-elements": "^1.0.0"
   }
 }

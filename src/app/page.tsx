@@ -35,8 +35,10 @@ export default function Home() {
         setDarkmode }}>
         <main className={darkmode ? pageStyles.mainDark : pageStyles.mainLight }>
           <Header />
+
           <Slider />
           <SearchInput />
+
           <div className={pageStyles.companiesDiv}>
           { companies?.length == 0 
           ? <div className={pageStyles.loadingDiv}><Loading /></div> 
