@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Header from "@/components/Header";
 import isMobile from 'is-mobile';
 import { useEffect, useState } from "react";
@@ -18,14 +19,17 @@ export default function Esg() {
     <div 
     className={`${darkmode ? 'dark': ''} w-screen min-h-screen bg-[#d9ed92] absolute flex flex-col`}>
       <Header />
-      <div className={`${!darkmode ? 'bg-[#d9ed92] text-[#00001e]' : 'bg-[#00001e] text-[#d9ed92]'} w-screen ${isMobileDevice ? 'mt-12' : 'mt-20'} relative`}>
+      <div className={`${!darkmode ? 'bg-[#d9ed92] text-[#00001e]' : 'bg-[#00001e] text-[#d9ed92]'} w-screen ${isMobileDevice ? 'mt-12' : 'mt-20'} relative text-justify pb-[2%]`}>
         <div className={`topWave ${ darkmode ? "bg-[#d9ed92]" : "bg-[#00001e]"} h-80 -mb-64`} />
           <div className={`p-8 ${isMobileDevice ? "px-3" : "px-28"}`}>
-            <h1 className="text-3xl font-bold mb-4">Entendendo ESG - Sustentabilidade Simplificada</h1>
+            <h1 className="text-2xl font-bold mb-4">Entendendo ESG - Sustentabilidade Simplificada</h1>
 
-            <p className="text-lg mb-4">
-              Bem-vindo à seção ESG do ESG Simplify, onde simplificamos a complexa paisagem da sustentabilidade empresarial para você. Entenda o que é ESG, descubra por que as empresas estão adotando essa abordagem e explore como você pode se tornar parte de uma mudança positiva para o mundo. Vamos começar!
-            </p>
+            <div className="flex flex-wrap ">
+              <img src="/images/esg.svg" alt="esg related image" width={500} />
+              <p className={`mb-4 ${isMobileDevice ? "text-xl" : "w-[53%] pt-12 text-2xl"}`}>
+                Bem-vindo à seção ESG do ESG Simplify, onde simplificamos a complexa paisagem da sustentabilidade empresarial para você. Entenda o que é ESG, descubra por que as empresas estão adotando essa abordagem e explore como você pode se tornar parte de uma mudança positiva para o mundo. Vamos começar!
+              </p>
+            </div>
 
             <h2 className="text-2xl font-semibold mb-2">O que é ESG?</h2>
             <p className="text-lg mb-4">
@@ -77,6 +81,8 @@ export default function Esg() {
             <p className="text-lg">
               Explorar e compreender ESG é um passo importante para um futuro mais consciente e responsável. Juntos, podemos fazer a diferença!
             </p>
+
+            <img src="/images/esgEnd.svg" alt="esg related image" width={500} className="m-auto" />
         </div>
       </div>
     </div>
