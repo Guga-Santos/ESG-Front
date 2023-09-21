@@ -18,8 +18,8 @@ export default function Esg() {
     <div 
     className={`${darkmode ? 'dark': ''} w-screen min-h-screen bg-[#d9ed92] absolute flex flex-col`}>
       <Header />
-      <div className={`${darkmode ? 'bg-[#d9ed92] text-[#00001e]' : 'bg-[#00001e] text-[#d9ed92]'} w-screen ${isMobileDevice ? 'mt-12' : 'mt-20'} relative`}>
-        <div className="topWave bg-[#00001e] h-80 -mb-64" />
+      <div className={`${!darkmode ? 'bg-[#d9ed92] text-[#00001e]' : 'bg-[#00001e] text-[#d9ed92]'} w-screen ${isMobileDevice ? 'mt-12' : 'mt-20'} relative`}>
+        <div className={`topWave ${ darkmode ? "bg-[#d9ed92]" : "bg-[#00001e]"} h-80 -mb-64`} />
           <div className={`p-8 ${isMobileDevice ? "px-3" : "px-28"}`}>
             <h1 className="text-3xl font-bold mb-4">Entendendo ESG - Sustentabilidade Simplificada</h1>
 
