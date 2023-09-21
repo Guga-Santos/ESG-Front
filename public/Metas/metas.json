@@ -1,11 +1,13 @@
 [
   {
+    "titulo": "ERRADICAÇÃO DA POBREZA",
     "meta": [
       "O Objetivo 1 da Agenda 2030 é claro e ambicioso: acabar com a pobreza em todas as suas formas, em todos os lugares. Para alcançar esse objetivo, várias metas foram estabelecidas.", "Primeiramente, até 2030, a meta é erradicar a pobreza extrema, que é definida como viver com menos de US$ 1,90 por dia, para todas as pessoas em todo o mundo. Isso representa um compromisso significativo em direção à eliminação das condições mais severas de privação.", "Além disso, o objetivo é reduzir pela metade a proporção de pessoas que vivem na pobreza, levando em consideração as definições nacionais. Isso significa não apenas diminuir a pobreza extrema, mas também abordar outras dimensões da pobreza.", "Para atingir essas metas, é essencial implementar medidas e sistemas de proteção social adequados em nível nacional, garantindo que os pobres e vulneráveis tenham acesso a uma rede de segurança. O objetivo é alcançar uma cobertura substancial até 2030.", "Além disso, é crucial garantir que todos, especialmente os mais pobres e vulneráveis, tenham igualdade de direitos no acesso a recursos econômicos, serviços básicos e propriedade. Isso inclui o acesso a tecnologias, serviços financeiros e controle sobre a terra e outros ativos.", "A resiliência das pessoas em situação de pobreza e vulnerabilidade também é uma prioridade. Isso envolve a redução da exposição a eventos extremos relacionados ao clima e a choques econômicos, sociais e ambientais.", "Para tornar isso possível, é necessário mobilizar recursos significativos de várias fontes, incluindo cooperação para o desenvolvimento. Os países em desenvolvimento, especialmente os menos desenvolvidos, precisam de apoio para implementar programas e políticas eficazes na luta contra a pobreza.", "Finalmente, é importante estabelecer políticas sólidas em níveis nacional, regional e internacional, com foco em estratégias de desenvolvimento que considerem as necessidades dos pobres e sejam sensíveis ao gênero. Isso é essencial para garantir investimentos acelerados na erradicação da pobreza.", "Em resumo, o Objetivo 1 da Agenda 2030 representa um compromisso global para acabar com a pobreza, abordando tanto a pobreza extrema quanto outras formas de privação. Isso envolve a implementação de medidas de proteção social, igualdade de direitos econômicos e sociais, aumento da resiliência das populações vulneráveis e a mobilização de recursos e políticas eficazes para alcançar essa meta essencial."
     ],
     "imagem": "/Metas/ods01.svg"
   },
   {
+    "titulo": "FOME ZERO E AGRICULTURA SUSTENTÁVEL",
     "meta": [
       "O Objetivo 2 da Agenda 2030 é voltado para a erradicação da fome, a promoção da segurança alimentar, a melhoria da nutrição e o estímulo à agricultura sustentável. Isso envolve diversas metas ambiciosas.", 
       "Em primeiro lugar, a meta principal é clara: eliminar a fome até 2030, assegurando que todas as pessoas, especialmente as mais pobres e vulneráveis, tenham acesso a alimentos seguros, nutritivos e em quantidade suficiente ao longo do ano. Isso representa um compromisso fundamental com a dignidade e o bem-estar de todas as pessoas.", 
@@ -21,6 +23,7 @@
     "imagem": "/Metas/ods02.svg"
   },
   {
+    "titulo": "SAÚDE E BEM-ESTAR",
     "meta": [
       "O Objetivo 3 da Agenda 2030 tem como objetivo central assegurar uma vida saudável e promover o bem-estar para todas as pessoas, independentemente da idade. Este objetivo abrange uma série de metas ambiciosas para melhorar a saúde global.",
       "Uma das metas é reduzir significativamente a taxa de mortalidade materna global, visando menos de 70 mortes por 100.000 nascidos vivos até 2030. Isso é fundamental para proteger as mães durante a gravidez e o parto.",
@@ -39,6 +42,7 @@
     "imagem": "/Metas/ods03.svg"
   },
   {
+    "titulo": "EDUCAÇÃO DE QUALIDADE",
     "meta": [
       "O Objetivo 4 da Agenda 2030 tem como objetivo central promover a educação inclusiva, equitativa e de qualidade, bem como proporcionar oportunidades de aprendizado ao longo da vida para todas as pessoas, independentemente de sua idade ou circunstâncias. Este objetivo é crucial para o desenvolvimento sustentável e o bem-estar global.",
       "Uma das principais metas é garantir que todas as crianças, meninas e meninos, concluam o ensino primário e secundário de maneira gratuita, justa e com qualidade até 2030. Isso não apenas impulsiona o acesso à educação, mas também a qualidade do ensino e resultados de aprendizagem efetivos.",
@@ -55,6 +59,7 @@
     "imagem": "/Metas/ods04.svg"
   },
   {
+    "titulo": "IGUALDADE DE GÊNERO",
     "meta": [
       "O Objetivo 5 da Agenda 2030 é dedicado a alcançar a igualdade de gênero e empoderar todas as mulheres e meninas. Este objetivo é essencial para construir sociedades mais justas e inclusivas, abrangendo uma série de metas significativas:",
     "Uma das principais metas é acabar com todas as formas de discriminação contra mulheres e meninas em todo o mundo. Isso envolve a promoção da igualdade de gênero em todas as esferas da sociedade.",
@@ -71,6 +76,7 @@
     "imagem": "/Metas/ods05.svg"
   },
   {
+    "titulo": "ÁGUA POTÁVEL E SANEAMENTO",
     "meta": [
       "O Objetivo 6 da Agenda 2030 visa assegurar a disponibilidade e a gestão sustentável da água e saneamento para todas as pessoas. Trata-se de um objetivo fundamental para a saúde, o meio ambiente e o desenvolvimento global.",
       "Uma das principais metas é alcançar, até 2030, o acesso universal e equitativo a água potável e segura para todos, reconhecendo a água como um direito humano essencial.",
@@ -85,6 +91,7 @@
     "imagem": "/Metas/ods06.svg"
   },
   {
+    "titulo": "ENERGIA LIMPA E ACESSÍVEL",
     "meta": [
       "O Objetivo 7 da Agenda 2030 busca garantir o acesso confiável, sustentável, moderno e acessível à energia para todas as pessoas. A energia desempenha um papel vital no desenvolvimento econômico, na qualidade de vida e na mitigação das mudanças climáticas.",
       "Uma das principais metas é assegurar, até 2030, o acesso universal a serviços de energia que sejam confiáveis, modernos e acessíveis. Isso significa que todas as pessoas devem ter acesso a fontes de energia seguras e eficientes.",
@@ -96,6 +103,7 @@
     "imagem": "/Metas/ods07.svg"
   },
   {
+    "titulo": "TRABALHO DESCENTE E CRESCIMENTO ECONÔMICO",
     "meta": [
       "O Objetivo 8 da Agenda 2030 visa promover o crescimento econômico sustentado, inclusivo e sustentável, bem como o emprego pleno e produtivo e o trabalho decente para todas as pessoas. Este objetivo busca equilibrar o desenvolvimento econômico com preocupações ambientais e sociais.",
       "Uma das metas é sustentar o crescimento econômico per capita, adaptado às circunstâncias nacionais, com um foco especial em países menos desenvolvidos, visando a um crescimento anual do PIB de pelo menos 7%. Isso busca reduzir disparidades econômicas globais.",
@@ -109,6 +117,7 @@
     "imagem": "/Metas/ods08.svg"
   },
   {
+    "titulo": "INDÚSTRIA, INOVAÇÃO E INFRAESTRUTURA",
     "meta": [
       "O Objetivo 9 da Agenda 2030 tem como objetivo principal a construção de infraestruturas resilientes, a promoção da industrialização inclusiva e sustentável, bem como o estímulo à inovação. Isso visa impulsionar o desenvolvimento econômico e social de forma equitativa e acessível para todos.",
       "Uma das metas é o desenvolvimento de infraestruturas de qualidade, confiáveis, sustentáveis e resilientes, incluindo infraestruturas regionais e transfronteiriças. O foco é garantir o acesso equitativo a essas infraestruturas a preços acessíveis para apoiar o bem-estar humano e o crescimento econômico.",
@@ -120,6 +129,7 @@
     "imagem": "/Metas/ods09.svg"
   },
   {
+    "titulo": "REDUÇÃO DAS DESIGUALDADES",
     "meta": [
       "O Objetivo 10 da Agenda 2030 visa reduzir a desigualdade dentro dos países e entre eles, promovendo a igualdade de oportunidades e resultados para todos, independentemente de idade, gênero, deficiência, raça, etnia, origem, religião ou condição econômica.",
       "Uma das metas é alcançar e manter o crescimento da renda dos 40% mais pobres da população a uma taxa superior à média nacional até 2030. Isso implica em reduzir a disparidade de renda e garantir que os mais vulneráveis também se beneficiem do crescimento econômico.",
@@ -130,6 +140,7 @@
     "imagem": "/Metas/ods10.svg"
   },
   {
+    "titulo": "CIDADES E COMUNIDADES SUSTENTÁVEIS",
     "meta": [
       "O Objetivo 11 da Agenda 2030 tem como objetivo tornar as cidades e os assentamentos humanos mais inclusivos, seguros, resilientes e sustentáveis.",
       "Isso envolve garantir, até 2030, que todas as pessoas tenham acesso a habitação segura, adequada e acessível, bem como aos serviços básicos, e urbanizar as favelas.",
@@ -146,6 +157,7 @@
     "imagem": "/Metas/ods11.svg"
   },
   {
+    "titulo": "CONSUMO E PRODUÇÃO RESPONSÁVEIS",
     "meta": [
       "O Objetivo 12 da Agenda 2030 visa assegurar padrões de produção e consumo sustentáveis em nível global.",
       "Para alcançar esse objetivo, é fundamental implementar o Plano Decenal de Programas sobre Produção e Consumo Sustentáveis, com ênfase na liderança dos países desenvolvidos e considerando as capacidades dos países em desenvolvimento.",
@@ -162,6 +174,7 @@
     "imagem": "/Metas/ods12.svg"
   },
   {
+    "titulo": "AÇÃO CONTRA A MUDANÇA GLOBAL DO CLIMA",
     "meta": [
       "O Objetivo 13 da Agenda 2030 enfoca a urgência de tomar medidas para combater a mudança climática e seus impactos.",
       "Para alcançar esse objetivo, é crucial reforçar a resiliência e a capacidade de adaptação a riscos relacionados ao clima e a catástrofes naturais em todos os países, reconhecendo a importância da preparação para lidar com eventos climáticos extremos.",
@@ -173,6 +186,7 @@
     "imagem": "/Metas/ods13.svg"
   },
   {
+    "titulo": "VIDA NA ÁGUA",
     "meta": [
       "O Objetivo 14 da Agenda 2030 destaca a importância da conservação e uso sustentável dos oceanos, dos mares e dos recursos marinhos para o desenvolvimento sustentável.",
       "Para atingir esse objetivo, são estabelecidas diversas metas e ações. Até 2025, é necessário prevenir e reduzir significativamente a poluição marinha de todos os tipos, especialmente aquela originada de atividades terrestres, incluindo detritos marinhos e poluição por nutrientes.",
@@ -188,6 +202,7 @@
     "imagem": "/Metas/ods14.svg"
   },
   {
+    "titulo": "VIDA TERRESTRE",
     "meta": [
       "O Objetivo 15 da Agenda 2030 tem como foco a proteção, recuperação e uso sustentável dos ecossistemas terrestres, a gestão sustentável das florestas, a luta contra a desertificação, a reversão da degradação da terra e a preservação da biodiversidade.",
       "Uma das metas até 2020 é garantir a conservação, recuperação e uso sustentável de ecossistemas terrestres e de água doce interiores, incluindo florestas, zonas úmidas, montanhas e terras áridas, de acordo com acordos internacionais.",
@@ -204,6 +219,7 @@
     "imagem": "/Metas/ods15.svg"
   },
   {
+    "titulo": "PAZ, JUSTIÇA E INSTITUIÇÕES EFICAZES",
     "meta": [
       "O Objetivo 16 da Agenda 2030 visa promover sociedades pacíficas e inclusivas para o desenvolvimento sustentável, proporcionar acesso à justiça para todos e construir instituições eficazes, responsáveis e inclusivas em todos os níveis.",
       "Ele busca reduzir significativamente todas as formas de violência e as taxas de mortalidade relacionadas, acabar com o abuso, exploração, tráfico e todas as formas de violência e tortura contra crianças, e promover o Estado de Direito, garantindo igualdade de acesso à justiça para todos.",
@@ -215,6 +231,7 @@
     "imagem": "/Metas/ods16.svg"
   },
   {
+    "titulo": "PARCERIAS E MEIOS DE IMPLEMENTAÇÃO",
     "meta": [
       "O Objetivo 17 da Agenda 2030 visa fortalecer os meios de implementação e revitalizar a parceria global para o desenvolvimento sustentável.",
       "Na área de Finanças, busca fortalecer a mobilização de recursos internos, apoiar países desenvolvidos a cumprir seus compromissos de assistência oficial ao desenvolvimento, mobilizar recursos financeiros adicionais para países em desenvolvimento e promover políticas coordenadas para a sustentabilidade da dívida de longo prazo.",
@@ -228,6 +245,7 @@
     "imagem": "/Metas/ods17.svg"
   },
   {
+    "titulo": "",
     "meta": [],
     "imagem": ""
   }

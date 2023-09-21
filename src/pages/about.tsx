@@ -22,7 +22,7 @@ export default function About() {
       <Header />
 
       <div 
-      className={`${darkmode ? "bg-[#00001e]" : "bg-[#d9ed92] text-[#00001e]"} w-screen h-screen ${isMobileDevice ? 'mt-12' : 'mt-20'} relative`}>
+      className={`${darkmode ? "bg-[#00001e] text-[#d9ed92]" : "bg-[#d9ed92] text-[#00001e]"} w-screen h-screen ${isMobileDevice ? 'mt-12' : 'mt-20'} relative`}>
         
         <div className={`topWave ${darkmode ? "bg-[#d9ed92]" : "bg-[#00001e]"} h-80`}/>
         <PageWrapper>
@@ -40,7 +40,7 @@ export default function About() {
         </PageWrapper>
       </div>
       <div 
-      className={`${darkmode ?  "bg-[#d9ed92] text-[#00001e]" : "bg-[#00001e]"} w-screen h-screen relative`}>
+      className={`${darkmode ?  "bg-[#d9ed92] text-[#00001e]" : "bg-[#00001e] text-[#d9ed92]"} w-screen h-screen relative`}>
         <div className={`topWave ${!darkmode ? "bg-[#d9ed92]" : "bg-[#00001e]"} h-80 -mt-2`}/>
         <PageWrapper>
           <div className="flex justify-between bg-[#00001e]">
@@ -57,7 +57,7 @@ export default function About() {
         </PageWrapper>
       </div>
       <div 
-      className={`${darkmode ? "bg-[#00001e]" : "bg-[#d9ed92] text-[#00001e]"} w-screen h-screen relative`}>
+      className={`${darkmode ? "bg-[#00001e] text-[#d9ed92]" : "bg-[#d9ed92] text-[#00001e]"} w-screen h-screen relative`}>
         <div className={`topWave ${darkmode ? "bg-[#d9ed92]" : "bg-[#00001e]"} h-80`}/>
         <PageWrapper>
         <div className="flex justify-between bg-[#00001e]">
@@ -74,7 +74,7 @@ export default function About() {
         </PageWrapper>
       </div>
       <div 
-      className={`${darkmode ?  "bg-[#d9ed92] text-[#00001e]" : "bg-[#00001e]"} w-screen h-screen relative`}>
+      className={`${darkmode ?  "bg-[#d9ed92] text-[#00001e]" : "bg-[#00001e] text-[#d9ed92]"} w-screen h-screen relative`}>
         <div className={`topWave ${!darkmode ? "bg-[#d9ed92]" : "bg-[#00001e]"} h-80 -mt-2`}/>
         <PageWrapper>
           <div className="flex justify-between bg-[#00001e]">
@@ -91,7 +91,7 @@ export default function About() {
         </PageWrapper>
       </div>
       <div 
-      className={`${darkmode ? "bg-[#00001e]" : "bg-[#d9ed92] text-[#00001e]"} w-screen h-screen relative`}>
+      className={`${darkmode ? "bg-[#00001e] text-[#d9ed92]" : "bg-[#d9ed92] text-[#00001e]"} w-screen h-screen relative`}>
         <div className={`topWave ${darkmode ? "bg-[#d9ed92]" : "bg-[#00001e]"} h-80 -mt-2`}/>
         <PageWrapper>
         <div className="flex justify-between bg-[#00001e]">
