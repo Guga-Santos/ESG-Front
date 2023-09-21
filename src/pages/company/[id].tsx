@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Loading from '@/components/Loading';
 import ChartBoard from '@/components/chartBoard';
 import { ResponseAPI } from '@/interfaces/Response.interface';
+import PageWrapper from '@/utils/PageWrapper';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import data from '../../mocks/fakeData.json';
@@ -38,6 +39,7 @@ function CompanyPage() {
         <Loading/>
         </div> 
       : <div className={darkmode ? 'bg-[#00001e]' : 'bg-[#d9ed92]' }>
+        <PageWrapper>
           <div className={darkmode ? 'w-3/4 flex flex-wrap mx-auto pt-32 mb-8 justify-between text-white bg-[#00001e]' : 'w-3/4 flex flex-wrap mx-auto pt-32 mb-8 justify-between text-[#184E77] bg-[#d9ed92]'}>
             <figure>
               <img 
@@ -57,6 +59,7 @@ function CompanyPage() {
             Acesse o relatório completo!
           </button>
           </div>
+        </PageWrapper>
           <ChartBoard {...data.company}/>
         </div>}
     </div>
