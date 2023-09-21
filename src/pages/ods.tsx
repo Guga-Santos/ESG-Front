@@ -54,7 +54,7 @@ export default function Ods() {
       ))}
       </div>
       {
-        !click 
+        click 
         && <div 
         className="fixed z-50 bg-[rgba(0,0,0,0.5)] w-full p-4 h-[100%] w-[100%] flex justify-center items-center"
         onClick={() => setClick(!click)}> 
@@ -71,7 +71,7 @@ export default function Ods() {
                 </PageWrapper>
               ))}
               <PageWrapper>
-                <img src={odsTexts[0].imagem} alt="imagem referente a ods" className="mt-6" />
+                <img src={odsTexts[position].imagem} alt="imagem referente a ods" className="mt-6" />
               </PageWrapper>
             </div>
             </div>
