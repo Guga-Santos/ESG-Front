@@ -71,7 +71,7 @@ export default function Ods() {
                 </PageWrapper>
               ))}
               <PageWrapper>
-                <img src={odsTexts[position].imagem} alt="imagem referente a ods" className="mt-6" />
+                <img src={odsTexts[position].imagem} alt="imagem referente a ods" className={`mt-6 ${isMobileDevice ? "" : "m-auto w-2/3"}`} />
               </PageWrapper>
             </div>
             </div>
