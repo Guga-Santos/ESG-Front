@@ -42,7 +42,7 @@ export default function Ods() {
           src={path} 
           alt="ods image" 
           key={index}
-          id={index}
+          id={index.toString()}
           width={160}
           height={160}
           onClick={(e) => handleClick((e.target as HTMLImageElement).id)}
