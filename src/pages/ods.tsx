@@ -23,9 +23,10 @@ export default function Ods() {
   }, []);
 
   const handleClick = (id: string) => {
-    setClick(!click)
-    setPosition(+id);
-    console.log(id);
+    if(id !== '17') {
+      setClick(!click)
+      setPosition(+id);
+    }
   }
   
   return (
