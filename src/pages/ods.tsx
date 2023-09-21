@@ -44,11 +44,19 @@ export default function Ods() {
       ))}
       </div>
       {
-        click 
+        !click 
         && <div 
         className="fixed z-50 bg-[rgba(0,0,0,0.5)] w-full p-4 h-[100%] w-[100%] flex justify-center items-center"
         onClick={() => setClick(!click)}> 
-          <div className={`${isMobileDevice ? "h-[90%] w-[95%]" : "h-[80%] w-[80%]"} bg-white`}></div>
+          <div className={`${isMobileDevice ? "h-[90%] w-[95%]" : "h-[80%] w-[80%]"} bg-white`}>
+          <div
+          className="h-full w-full overflow-y-scroll"
+      // Adicione seu conteúdo aqui
+          >
+            <div className={`topWave ${darkmode ? 'bg-[#d9ed92]' : 'bg-[#00001e]'} h-80 `} />
+            <div className="h-[200%]"></div>
+            </div>
+          </div>
         </div>
       }
     </div>
