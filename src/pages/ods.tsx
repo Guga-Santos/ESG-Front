@@ -62,10 +62,11 @@ export default function Ods() {
           <div className={`${isMobileDevice ? "h-[90%] w-[95%]" : "h-[80%] w-[80%]"} bg-white`}>
           <div
           className="h-full w-full overflow-y-scroll"
-      // Adicione seu conteúdo aqui
+
           >
             <div className={`${!darkmode ? 'bg-[#d9ed92]' : 'bg-[#00001e]'} pb-4`}>
             <div className={`topWave ${darkmode ? 'bg-[#d9ed92]' : 'bg-[#00001e]'} h-80 -mb-64 `} />
+            <h1 className={`${isMobileDevice ? "text-lg" : "text-3xl"} mx-8 pt-6 text-semibold`}>{odsTexts[position].titulo}</h1>
               { odsTexts[position].meta.map((phrase, index) => (
                 <PageWrapper key={index}>
                   <p  className="text-lg text-justify mt-8 px-8">{phrase}</p>
