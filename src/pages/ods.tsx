@@ -4,12 +4,15 @@ import OdsTexts from "@/components/OdsTexts";
 import PageWrapper from "@/utils/PageWrapper";
 import isMobile from 'is-mobile';
 import { useEffect, useState } from "react";
-import ods from '../../public/images/ODS/odsPaths.json';
+import odsTexts from '../../public/Metas/metas.json';
+import odsImages from '../../public/images/ODS/odsPaths.json';
+
 
 export default function Ods() {
   const [darkmode, setDarkMode] = useState<boolean>();
   const [isMobileDevice, setIsMobileDevice] = useState<boolean>(false);
   const [click, setClick] = useState<boolean>(false);
+  const [position, setPosition] = useState<number>(0);
 
   useEffect(() => {
     ;(async () => {
@@ -18,6 +21,12 @@ export default function Ods() {
       setIsMobileDevice(isMobile());
     })();
   }, []);
+
+  const handleClick = (id: string) => {
+    setClick(!click)
+    setPosition(+id);
+    console.log(id);
+  }
   
   return (
     <div 
@@ -27,15 +36,16 @@ export default function Ods() {
       <OdsTexts />
 
       <div className={`flex flex-wrap gap-4 justify-center p-8  ${isMobileDevice ? "top-[56%]" : "top-[68%]"}`}>
-      {ods.map((path, index) => (
+      {odsImages.map((path, index) => (
         <PageWrapper key={index}>
           <img 
           src={path} 
           alt="ods image" 
           key={index}
+          id={index}
           width={160}
           height={160}
-          onClick={() => setClick(!click)}
+          onClick={(e) => handleClick((e.target as HTMLImageElement).id)}
           className="
           shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] 
           hover:shadow-[rgba(50,50,93,0.5)_0px_6px_12px_-2px,_rgba(0,0,0,0.5)_0px_3px_7px_-3px] 
@@ -53,8 +63,17 @@ export default function Ods() {
           className="h-full w-full overflow-y-scroll"
       // Adicione seu conteúdo aqui
           >
-            <div className={`topWave ${darkmode ? 'bg-[#d9ed92]' : 'bg-[#00001e]'} h-80 `} />
-            <div className="h-[200%]"></div>
+            <div className={`${!darkmode ? 'bg-[#d9ed92]' : 'bg-[#00001e]'} pb-4`}>
+            <div className={`topWave ${darkmode ? 'bg-[#d9ed92]' : 'bg-[#00001e]'} h-80 -mb-64 `} />
+              { odsTexts[position].meta.map((phrase, index) => (
+                <PageWrapper key={index}>
+                  <p  className="text-lg text-justify mt-8 px-8">{phrase}</p>
+                </PageWrapper>
+              ))}
+              <PageWrapper>
+                <img src={odsTexts[0].imagem} alt="imagem referente a ods" className="mt-6" />
+              </PageWrapper>
+            </div>
             </div>
           </div>
         </div>
