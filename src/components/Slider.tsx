@@ -30,13 +30,13 @@ export default function Slider() {
       <div 
       className={isMobileDevice 
       ? `${!darkmode ? 'bg-[#00001e]' : 'bg-[#d9ed92]'} waveOneMobil w-screen h-1/2 z-10 absolute top-80`
-      : `${!darkmode ? 'waveOne bg-[#00001e]' : 'waveThree bg-[#d9ed92]'} w-screen h-1/2 z-10 absolute top-80 mt-4`} />
+      : `${!darkmode ? ' bg-[#00001e]' : 'bg-[#d9ed92]'} waveOne w-screen h-1/2 z-10 absolute top-80 mt-4`} />
       <div className={isMobileDevice 
         ? 'waveTwoMobil  w-screen bg-white h-2/3 z-10 absolute top-96 -mt-36' 
         : 'waveTwo bg-white w-screen h-1/2 z-10 absolute top-80 mt-4'} />
       <div className={isMobileDevice 
         ? `${darkmode ? 'bg-[#00001e]' : 'bg-[#d9ed92]'} waveThreeMobil w-screen h-2/3 z-10 absolute top-96 -mt-32` 
-        : `${darkmode ? 'waveOne bg-[#00001e]' : 'waveThree bg-[#d9ed92]'} w-screen h-1/2 z-10 absolute top-96 mt-2`} />
+        : `${darkmode ? 'bg-[#00001e]' : ' bg-[#d9ed92]'} waveThree w-screen h-1/2 z-10 absolute top-96 mt-2`} />
     </div>
   )
 }
