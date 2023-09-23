@@ -29,7 +29,7 @@ export default function Slider() {
       </div>
       <div 
       className={isMobileDevice 
-      ? `${!darkmode ? 'bg-[#00001e]' : 'bg-[#d9ed92]'} waveOneMobil w-screen h-1/2 z-10 absolute top-80`
+      ? `${!darkmode ? 'bg-[#00001e]' : 'bg-[#d9ed92]'} waveOneMobil w-screen h-2/3 z-10 absolute top-56`
       : `${!darkmode ? ' bg-[#00001e]' : 'bg-[#d9ed92]'} waveOne w-screen h-1/2 z-10 absolute top-80 mt-4`} />
       <div className={isMobileDevice 
         ? 'waveTwoMobil  w-screen bg-white h-2/3 z-10 absolute top-96 -mt-36' 
