@@ -1,8 +1,8 @@
 export const headerStyle = {
   header: "w-screen bg-[#FFF] fixed top-0 z-50 shadow-[rgba(0,_0,_0,_0.2)_0px_1px_18px]",
   nav: "bg-grey border-gray-200 lg:px-6 py-2.5 dark:bg-gray-800 sm-w-screen",
-  firstDiv: "flex flex-wrap justify-between sm-w-screen items-center mx-auto max-w-screen-xl lg:p-3",
-  image: "ml-4 h-10 lg:mr-12 sm:mr-2 rounded-xl sm:h-9 lg:w-40 md:w-40 sm:w-20",
+  firstDiv: "flex flex-wrap justify-between sm-w-screen items-center mx-auto max-w-screen-xl lg:p-3 px-2",
+  image: "ml-2 h-10 lg:mr-12 sm:mr-2 rounded-xl sm:h-9 lg:w-40 md:w-40 sm:w-20",
   logInBtn: "text-gray-300 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800",
   modeBtn: "h-10 w-14 text-white justify-center bg-transparent font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2",
   sunPath: "M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z",

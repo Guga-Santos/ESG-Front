@@ -44,7 +44,7 @@ export default function Header() {
             <img className={headerStyle.image} alt="Simplify Logo" src={!isMobileDevice ? headerSRC.logoG : headerSRC.logoP }/>
           </a>
           <div className="flex flex-wrap items-center lg:order-2">
-            <a href="#" className={headerStyle.logInBtn}>Log in</a>
+            {/* <a href="#" className={headerStyle.logInBtn}>Log in</a> */}
             <button
             type="button"
             onClick={() => handleDarkMode()}
