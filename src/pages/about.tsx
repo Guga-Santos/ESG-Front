@@ -109,7 +109,7 @@ export default function About() {
          </div>
         </PageWrapper>
       </div>
-
+      <div className={`bottomWave ${ darkmode ? "bg-[#d9ed92]" : "bg-[#00001e]"} ${!isMobileDevice ? "h-40 -mb-8 -mt-20" : "h-40 -mt-20"}`} />
     </div>
   )
 }
