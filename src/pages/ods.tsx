@@ -33,7 +33,7 @@ export default function Ods() {
     <div 
     className={`${darkmode ? 'dark': ''} w-screen ${isMobileDevice ? "min-h-[420%]" : "min-h-[310%]"} ${darkmode ? 'bg-[#00001e]  text-[#d9ed92]' : 'bg-[#d9ed92] text-[#00001e]'} absolute flex flex-col`}>
       <Header />
-      <div className={`topWave ${darkmode ? 'bg-[#d9ed92]' : 'bg-[#00001e]'} h-80 ${isMobileDevice ? "mt-12" : "mt-20 -mb-52"}`} />
+      <div className={`topWave ${darkmode ? 'bg-[#d9ed92]' : 'bg-[#00001e]'}  ${isMobileDevice ? "h-60 mt-12 mb-20" : "h-80 mt-20 -mb-52"}`} />
       <OdsTexts />
 
       <div className={`flex flex-wrap gap-4 justify-center p-8  ${isMobileDevice ? "top-[56%]" : "top-[68%]"}`}>

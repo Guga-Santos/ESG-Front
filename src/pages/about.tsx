@@ -24,7 +24,7 @@ export default function About() {
       <div 
       className={`${darkmode ? "bg-[#00001e] text-[#d9ed92]" : "bg-[#d9ed92] text-[#00001e]"} w-screen h-screen ${isMobileDevice ? 'mt-12' : 'mt-20'} relative`}>
         
-        <div className={`topWave ${darkmode ? "bg-[#d9ed92]" : "bg-[#00001e]"} h-80`}/>
+        <div className={`topWave ${darkmode ? "bg-[#d9ed92]" : "bg-[#00001e]"} ${isMobileDevice ? "h-60": "h-80"}`}/>
         <PageWrapper>
         <div className="flex justify-between">
           <div className={isMobileDevice ? "w-screen p-10 absolute top-12" : "absolute w-[50%] top-28 right-[10%]"}>
@@ -58,7 +58,7 @@ export default function About() {
       </div>
       <div 
       className={`${darkmode ? "bg-[#00001e] text-[#d9ed92]" : "bg-[#d9ed92] text-[#00001e]"} w-screen h-screen relative`}>
-        <div className={`topWave ${darkmode ? "bg-[#d9ed92]" : "bg-[#00001e]"} h-80`}/>
+        <div className={`topWave ${darkmode ? "bg-[#d9ed92]" : "bg-[#00001e]"} h-80 -mt-2`}/>
         <PageWrapper>
         <div className="flex justify-between bg-[#00001e]">
             <div className={isMobileDevice ? "w-screen p-10 absolute top-[5%]" : "absolute w-[50%] top-[25%] right-[5%]"}>

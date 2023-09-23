@@ -21,7 +21,7 @@ export default function Esg() {
     className={`${darkmode ? 'dark': ''} w-screen min-h-screen bg-[#d9ed92] absolute flex flex-col`}>
       <Header />
       <div className={`${!darkmode ? 'bg-[#d9ed92] text-[#00001e]' : 'bg-[#00001e] text-[#d9ed92]'} w-screen ${isMobileDevice ? 'mt-12' : 'mt-20'} relative text-justify`}>
-        <div className={`topWave ${ darkmode ? "bg-[#d9ed92]" : "bg-[#00001e]"} h-80 -mb-64`} />
+        <div className={`topWave ${ darkmode ? "bg-[#d9ed92]" : "bg-[#00001e]"} ${isMobileDevice ? 'h-60 -mb-40' : 'h-80 -mb-64'}`} />
           <div className={`p-8 ${isMobileDevice ? "px-3" : "px-28"}`}>
             <PageWrapper>
             <h1 className="text-2xl font-bold mb-4">Entendendo ESG - Sustentabilidade Simplificada</h1>
